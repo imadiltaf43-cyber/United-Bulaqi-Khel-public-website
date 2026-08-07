@@ -1,0 +1,31 @@
+/* Investors.css */
+
+:root{--gold:#d4af37;--card:#161b22;--light:#f7f8fa}
+.investor-hero{position:relative;height:60vh;min-height:420px;background:url('../../assets/images/investors/investors-banner.jpg') center/cover no-repeat;display:flex;align-items:center}
+.investor-hero .overlay{position:absolute;inset:0;background:linear-gradient(rgba(8,12,18,.7),rgba(8,12,18,.9))}
+.investor-hero .container{position:relative;z-index:2}.breadcrumb{color:var(--gold)}
+.investor-hero h1{font-size:58px;color:#fff}.investor-hero h1 span{color:var(--gold)}.investor-hero p{color:#ddd;max-width:700px}
+.investor-filter{margin-top:-55px;position:relative;z-index:5}
+.filter-wrapper{background:#fff;border-radius:18px;padding:25px;display:flex;gap:20px;flex-wrap:wrap;box-shadow:0 20px 50px rgba(0,0,0,.15)}
+.search-box{flex:1;display:flex;align-items:center;border:1px solid #ddd;border-radius:10px;overflow:hidden;min-width:280px}
+.search-box svg{margin:0 18px;color:var(--gold)}.search-box input{flex:1;height:55px;border:none;outline:none}
+.filter-wrapper select{height:55px;border:1px solid #ddd;border-radius:10px;padding:0 15px;min-width:180px}
+.investor-section{background:var(--light);padding:90px 0}
+.loading,.no-data{text-align:center;padding:100px 0}
+.investor-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:30px}
+.investor-card{background:var(--card);border-radius:18px;overflow:hidden;border:1px solid rgba(255,255,255,.05);transition:.35s}
+.investor-card:hover{transform:translateY(-10px);border-color:var(--gold)}
+.investor-logo{height:220px;background:#fff;display:flex;align-items:center;justify-content:center;padding:25px}
+.investor-logo img{max-width:100%;max-height:160px;object-fit:contain}
+.investor-body
+{padding:28px
+}
+.investor-category
+{display:inline-block;background:rgba(212,175,55,.15);color:var(--gold);padding:6px 14px;border-radius:30px}
+.investor-body h3{color:#fff;margin:18px 0 6px}.investor-name,.investor-info div{color:#ddd}
+.investor-info{display:flex;flex-direction:column;gap:14px;margin:22px 0}.investor-info svg{color:var(--gold)}
+.investor-footer{display:flex;justify-content:space-between;align-items:center}
+.status{padding:7px 18px;border-radius:25px;font-weight:700}.status.active{background:#123d23;color:#3be57b}.status.pending{background:#4b3b09;color:#ffd54d}.status.inactive{background:#4c1717;color:#ff8f8f}
+.details-btn{background:var(--gold);color:#111;text-decoration:none;padding:10px 18px;border-radius:8px;font-weight:700}
+@media(max-width:991px){.filter-wrapper{flex-direction:column}.search-box,.filter-wrapper select{width:100%}.investor-hero h1{font-size:42px}}
+@media(max-width:576px){.investor-grid{grid-template-columns:1fr}.investor-footer{flex-direction:column;align-items:flex-start;gap:15px}.details-btn{width:100%;text-align:center}}

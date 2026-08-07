@@ -1,0 +1,322 @@
+/* =====================================================
+   ABOUT HERO
+===================================================== */
+
+.about-hero {
+  position: relative;
+  height: 55vh;
+  min-height: 420px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+}
+
+.about-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, .85),
+    rgba(0, 0, 0, .45),
+    rgba(0, 0, 0, .80)
+  );
+}
+
+.about-hero-content {
+  position: relative;
+  z-index: 5;
+}
+
+.about-hero h1 {
+  color: #fff;
+  font-size: 68px;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.breadcrumb a {
+  color: #d4af37;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.breadcrumb p {
+  color: #fff;
+  margin: 0;
+}
+
+.breadcrumb span {
+  color: #aaa;
+}
+
+/* =====================================================
+   COMPANY
+===================================================== */
+
+.company-section {
+  padding: 100px 0;
+  background: #fff;
+}
+
+.company-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+  align-items: center;
+}
+
+.company-image img {
+  width: 100%;
+  border-radius: 18px;
+  object-fit: cover;
+  box-shadow: 0 25px 55px rgba(0,0,0,.15);
+}
+
+.section-tag {
+  color: #d4af37;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.company-content h2 {
+  margin: 18px 0 25px;
+  font-size: 42px;
+  font-weight: 800;
+  color: #111;
+  line-height: 1.2;
+}
+
+.company-content p {
+  color: #555;
+  line-height: 1.9;
+  margin-bottom: 18px;
+  font-size: 17px;
+}
+
+/* =====================================================
+   MISSION VISION
+===================================================== */
+
+.mission-vision {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+
+.mission-vision div {
+  background: #fff;
+  border: 1px solid #ececec;
+  border-radius: 16px;
+  padding: 28px;
+  transition: .35s;
+}
+
+.mission-vision div:hover {
+  transform: translateY(-8px);
+  border-color: #d4af37;
+  box-shadow: 0 20px 40px rgba(0,0,0,.08);
+}
+
+.mission-vision h4 {
+  color: #111;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.mission-vision p {
+  margin: 0;
+  font-size: 15px;
+}
+
+/* =====================================================
+   VALUES
+===================================================== */
+
+.values-section {
+  padding: 100px 0;
+  background: #f8f8f8;
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-heading span {
+  color: #d4af37;
+  letter-spacing: 3px;
+  font-weight: 700;
+}
+
+.section-heading h2 {
+  margin-top: 14px;
+  font-size: 44px;
+  font-weight: 800;
+  color: #111;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 30px;
+}
+
+.value-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 40px 30px;
+  text-align: center;
+  transition: .35s;
+  border: 1px solid transparent;
+}
+
+.value-card:hover {
+  transform: translateY(-12px);
+  border-color: #d4af37;
+  box-shadow: 0 30px 60px rgba(0,0,0,.08);
+}
+
+.value-card svg {
+  color: #d4af37;
+  margin-bottom: 22px;
+}
+
+.value-card h3 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: #111;
+}
+
+.value-card p {
+  color: #666;
+  line-height: 1.8;
+  font-size: 15px;
+}
+
+/* =====================================================
+   STATS
+===================================================== */
+
+.about-stats {
+  background: #111;
+  padding: 70px 0;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 30px;
+}
+
+.about-stat {
+  text-align: center;
+  border-right: 1px solid rgba(255,255,255,.12);
+}
+
+.about-stat:last-child {
+  border: none;
+}
+
+.about-stat svg {
+  color: #d4af37;
+  margin-bottom: 18px;
+}
+
+.about-stat h2 {
+  color: #d4af37;
+  font-size: 52px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.about-stat span {
+  color: #fff;
+  font-size: 17px;
+}
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media(max-width:992px){
+
+.company-grid{
+grid-template-columns:1fr;
+}
+
+.mission-vision{
+grid-template-columns:1fr;
+}
+
+.values-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+.stats-grid{
+grid-template-columns:repeat(2,1fr);
+row-gap:40px;
+}
+
+.about-stat{
+border:none;
+}
+
+.about-hero h1{
+font-size:52px;
+}
+
+}
+
+@media(max-width:768px){
+
+.values-grid{
+grid-template-columns:1fr;
+}
+
+.stats-grid{
+grid-template-columns:1fr;
+}
+
+.about-hero{
+height:42vh;
+}
+
+.about-hero h1{
+font-size:42px;
+}
+
+.company-content h2{
+font-size:34px;
+}
+
+.section-heading h2{
+font-size:34px;
+}
+
+}
+
+@media(max-width:576px){
+
+.company-section,
+.values-section{
+padding:70px 0;
+}
+
+.company-content h2{
+font-size:30px;
+}
+
+.about-stat h2{
+font-size:40px;
+}
+
+}

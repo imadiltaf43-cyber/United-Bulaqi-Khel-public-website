@@ -1,0 +1,346 @@
+/* ===========================================
+   MINERALS PAGE
+=========================================== */
+
+:root{
+    --gold:#d4a017;
+    --gold-dark:#b8860b;
+    --black:#0d0d0d;
+    --dark:#151515;
+    --light:#f8f8f8;
+    --border:#2b2b2b;
+}
+
+/* ===========================================
+   HERO
+=========================================== */
+
+.mineralsHero{
+
+    position:relative;
+    height:340px;
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    align-items:center;
+
+    overflow:hidden;
+
+}
+
+.heroOverlay{
+
+    position:absolute;
+    inset:0;
+
+    background:rgba(0,0,0,.65);
+
+}
+
+.mineralsHeroContent{
+
+    position:relative;
+    z-index:2;
+
+    color:white;
+
+}
+
+.breadcrumb{
+
+    font-size:14px;
+
+    margin-bottom:18px;
+
+    color:#ddd;
+
+}
+
+.breadcrumb span{
+
+    margin:0 8px;
+    color:var(--gold);
+
+}
+
+.mineralsHero h1{
+
+    font-size:54px;
+    font-weight:800;
+    letter-spacing:1px;
+
+    position:relative;
+
+}
+
+.mineralsHero h1::after{
+
+    content:"";
+
+    width:80px;
+    height:4px;
+
+    background:var(--gold);
+
+    display:block;
+
+    margin-top:16px;
+
+}
+
+/* ===========================================
+   PAGE
+=========================================== */
+
+.mineralsPage{
+
+    background:#ffffff;
+
+    padding:70px 0;
+
+}
+
+/* ===========================================
+   GRID
+=========================================== */
+
+.mineralsGrid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:28px;
+
+}
+
+/* ===========================================
+   CARD
+=========================================== */
+
+.mineralCard{
+
+    background:#111;
+
+    border-radius:12px;
+
+    overflow:hidden;
+
+    transition:.35s;
+
+    border:1px solid #242424;
+
+}
+
+.mineralCard:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 18px 40px rgba(0,0,0,.22);
+
+    border-color:var(--gold);
+
+}
+
+/* ===========================================
+   IMAGE
+=========================================== */
+
+.mineralImage{
+
+    height:240px;
+
+    overflow:hidden;
+
+}
+
+.mineralImage img{
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    transition:.45s;
+
+}
+
+.mineralCard:hover img{
+
+    transform:scale(1.08);
+
+}
+
+/* ===========================================
+   CONTENT
+=========================================== */
+
+.mineralContent{
+
+    padding:24px;
+
+}
+
+.mineralContent h3{
+
+    color:white;
+
+    font-size:24px;
+
+    margin-bottom:14px;
+
+    font-weight:700;
+
+    text-transform:uppercase;
+
+}
+
+.mineralContent p{
+
+    color:#d0d0d0;
+
+    line-height:1.7;
+
+    min-height:72px;
+
+    margin-bottom:22px;
+
+}
+
+/* ===========================================
+   BUTTON
+=========================================== */
+
+.detailsBtn{
+
+    color:var(--gold);
+
+    text-decoration:none;
+
+    font-weight:700;
+
+    transition:.3s;
+
+}
+
+.detailsBtn:hover{
+
+    color:white;
+
+}
+
+.detailsBtn::after{
+
+    content:" →";
+
+    transition:.3s;
+
+}
+
+.detailsBtn:hover::after{
+
+    margin-left:8px;
+
+}
+
+/* ===========================================
+   LOADING
+=========================================== */
+
+.loading{
+
+    text-align:center;
+
+    padding:100px;
+
+    font-size:22px;
+
+    color:#555;
+
+}
+
+/* ===========================================
+   RESPONSIVE
+=========================================== */
+
+@media(max-width:1100px){
+
+.mineralsGrid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+@media(max-width:768px){
+
+.mineralsHero{
+
+height:260px;
+
+}
+
+.mineralsHero h1{
+
+font-size:40px;
+
+}
+
+.mineralsGrid{
+
+grid-template-columns:1fr;
+
+gap:22px;
+
+}
+
+.mineralImage{
+
+height:220px;
+
+}
+
+}
+
+@media(max-width:500px){
+
+.mineralsHero{
+
+height:220px;
+
+}
+
+.mineralsHero h1{
+
+font-size:32px;
+
+}
+
+.breadcrumb{
+
+font-size:13px;
+
+}
+
+.mineralsPage{
+
+padding:45px 0;
+
+}
+
+.mineralContent{
+
+padding:18px;
+
+}
+
+.mineralContent h3{
+
+font-size:20px;
+
+}
+
+}

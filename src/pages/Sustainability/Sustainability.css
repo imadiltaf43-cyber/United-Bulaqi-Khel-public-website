@@ -1,0 +1,639 @@
+/* =====================================================
+   GLOBAL
+===================================================== */
+
+.sustainability-hero,
+.commitment-section,
+.pillars-section,
+.esg-section,
+.safety-section,
+.sustainability-cta{
+    position:relative;
+    width:100%;
+}
+
+.section-tag{
+    display:inline-block;
+    padding:8px 18px;
+    background:rgba(201,162,39,.12);
+    color:#C9A227;
+    border:1px solid rgba(201,162,39,.25);
+    border-radius:30px;
+    font-size:.82rem;
+    letter-spacing:2px;
+    font-weight:700;
+    margin-bottom:20px;
+    text-transform:uppercase;
+}
+
+.section-heading{
+    max-width:760px;
+    margin:0 auto 70px;
+    text-align:center;
+}
+
+.section-heading h2{
+    font-size:3rem;
+    font-weight:700;
+    color:#111;
+    line-height:1.2;
+    margin-bottom:22px;
+}
+
+.section-heading p{
+    color:#666;
+    font-size:1.05rem;
+    line-height:1.8;
+}
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.sustainability-hero{
+    height:75vh;
+    min-height:650px;
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    display:flex;
+    align-items:center;
+    overflow:hidden;
+}
+
+.sustainability-hero .hero-overlay{
+    position:absolute;
+    inset:0;
+    background:linear-gradient(
+        90deg,
+        rgba(0,0,0,.78),
+        rgba(0,0,0,.55),
+        rgba(0,0,0,.45)
+    );
+}
+
+.sustainability-hero-content{
+    position:relative;
+    z-index:2;
+    color:#fff;
+    max-width:760px;
+}
+
+.breadcrumb{
+    display:block;
+    color:#ddd;
+    margin-bottom:18px;
+    font-size:.95rem;
+}
+
+.breadcrumb span{
+    color:#C9A227;
+}
+
+.sustainability-hero h1{
+    font-size:4rem;
+    line-height:1.15;
+    font-weight:800;
+    margin-bottom:25px;
+}
+
+.sustainability-hero p{
+    max-width:640px;
+    font-size:1.12rem;
+    color:#f2f2f2;
+    line-height:1.9;
+}
+
+/* =====================================================
+   COMMITMENT
+===================================================== */
+
+.commitment-section{
+    padding:120px 0;
+    background:#fff;
+}
+
+.commitment-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:70px;
+    align-items:center;
+}
+
+.commitment-image{
+    position:relative;
+}
+
+.commitment-image img{
+    width:100%;
+    border-radius:26px;
+    object-fit:cover;
+    box-shadow:0 25px 60px rgba(0,0,0,.15);
+}
+
+.commitment-content h2{
+    font-size:2.8rem;
+    line-height:1.2;
+    margin-bottom:24px;
+    color:#111;
+}
+
+.commitment-content p{
+    color:#666;
+    line-height:1.9;
+    margin-bottom:35px;
+    font-size:1.05rem;
+}
+
+.commitment-features{
+    display:grid;
+    gap:18px;
+    margin-bottom:40px;
+}
+
+.feature-item{
+    display:flex;
+    align-items:center;
+    gap:18px;
+    font-weight:600;
+    color:#222;
+}
+
+.feature-item svg{
+    color:#C9A227;
+    font-size:1.2rem;
+}
+
+.primary-btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    padding:15px 34px;
+    background:#C9A227;
+    color:#fff;
+    border:none;
+    border-radius:50px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.35s;
+    text-decoration:none;
+}
+
+.primary-btn:hover{
+    transform:translateY(-5px);
+    background:#b18d15;
+    box-shadow:0 18px 35px rgba(201,162,39,.35);
+}
+
+.secondary-btn{
+    display:inline-flex;
+    align-items:center;
+    gap:12px;
+    padding:15px 34px;
+    border:2px solid #C9A227;
+    border-radius:50px;
+    color:#C9A227;
+    text-decoration:none;
+    font-weight:600;
+    transition:.35s;
+}
+
+.secondary-btn:hover{
+    background:#C9A227;
+    color:#fff;
+}
+
+/* =====================================================
+   SUSTAINABILITY PILLARS
+===================================================== */
+
+.pillars-section{
+    padding:120px 0;
+    background:#f8f9fa;
+}
+
+.pillars-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:30px;
+}
+
+.pillar-card{
+    background:#fff;
+    border-radius:22px;
+    padding:45px 35px;
+    text-align:center;
+    transition:.4s;
+    position:relative;
+    overflow:hidden;
+    border:1px solid rgba(0,0,0,.05);
+    box-shadow:0 15px 45px rgba(0,0,0,.06);
+}
+
+.pillar-card::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:5px;
+    background:#C9A227;
+    transform:scaleX(0);
+    transition:.4s;
+    transform-origin:left;
+}
+
+.pillar-card:hover::before{
+    transform:scaleX(1);
+}
+
+.pillar-card:hover{
+    transform:translateY(-12px);
+    box-shadow:0 30px 60px rgba(0,0,0,.12);
+}
+
+.pillar-icon{
+    width:85px;
+    height:85px;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin:auto;
+    margin-bottom:28px;
+    background:rgba(201,162,39,.12);
+}
+
+.pillar-icon svg{
+    font-size:2rem;
+    color:#C9A227;
+}
+
+.pillar-card h3{
+    margin-bottom:18px;
+    font-size:1.35rem;
+    color:#111;
+    font-weight:700;
+}
+
+.pillar-card p{
+    color:#666;
+    line-height:1.8;
+    font-size:.97rem;
+}
+
+/* =====================================================
+   ESG SECTION
+===================================================== */
+
+.esg-section{
+    padding:120px 0;
+    background:#fff;
+}
+
+.esg-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:70px;
+    align-items:center;
+}
+
+.esg-image img{
+    width:100%;
+    border-radius:26px;
+    object-fit:cover;
+    box-shadow:0 25px 60px rgba(0,0,0,.15);
+}
+
+.esg-content h2{
+    font-size:2.8rem;
+    line-height:1.2;
+    margin-bottom:25px;
+    color:#111;
+}
+
+.esg-content>p{
+    color:#666;
+    line-height:1.9;
+    margin-bottom:40px;
+}
+
+.esg-cards{
+    display:flex;
+    flex-direction:column;
+    gap:22px;
+}
+
+.esg-card{
+    display:flex;
+    gap:22px;
+    align-items:flex-start;
+    padding:25px;
+    border-radius:18px;
+    background:#fafafa;
+    transition:.35s;
+    border:1px solid rgba(0,0,0,.05);
+}
+
+.esg-card:hover{
+    transform:translateX(10px);
+    box-shadow:0 18px 35px rgba(0,0,0,.08);
+    background:#fff;
+}
+
+.esg-icon{
+    min-width:65px;
+    width:65px;
+    height:65px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border-radius:16px;
+    background:#C9A227;
+}
+
+.esg-icon svg{
+    color:#fff;
+    font-size:1.5rem;
+}
+
+.esg-card h3{
+    margin-bottom:8px;
+    font-size:1.2rem;
+    color:#111;
+}
+
+.esg-card p{
+    color:#666;
+    line-height:1.7;
+    font-size:.96rem;
+}
+
+
+/* =====================================================
+   SAFETY SECTION
+===================================================== */
+
+.safety-section{
+    padding:120px 0;
+    background:#f8f9fa;
+}
+
+.safety-row,
+.community-row{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:70px;
+    align-items:center;
+    margin-bottom:120px;
+}
+
+.community-row{
+    margin-bottom:0;
+}
+
+.safety-image img,
+.community-image img{
+    width:100%;
+    border-radius:24px;
+    object-fit:cover;
+    box-shadow:0 25px 60px rgba(0,0,0,.15);
+}
+
+.safety-content h2,
+.community-content h2{
+    font-size:2.8rem;
+    margin-bottom:24px;
+    line-height:1.2;
+    color:#111;
+}
+
+.safety-content p,
+.community-content p{
+    color:#666;
+    line-height:1.9;
+    margin-bottom:35px;
+    font-size:1.03rem;
+}
+
+.safety-features,
+.community-features{
+    display:grid;
+    gap:18px;
+}
+
+.feature{
+    display:flex;
+    align-items:center;
+    gap:18px;
+    font-weight:600;
+    color:#222;
+}
+
+.feature svg{
+    color:#C9A227;
+    font-size:1.25rem;
+}
+
+/* =====================================================
+   CTA
+===================================================== */
+
+.sustainability-cta{
+    padding:120px 0;
+    text-align:center;
+    color:#fff;
+    background:
+        linear-gradient(
+            rgba(0,0,0,.80),
+            rgba(0,0,0,.80)
+        ),
+        url("../../assets/images/sustainability/hero-sustainability.jpg");
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+}
+
+.sustainability-cta .section-tag{
+    background:rgba(255,255,255,.10);
+    border-color:rgba(255,255,255,.15);
+}
+
+.sustainability-cta h2{
+    font-size:3rem;
+    line-height:1.2;
+    margin-bottom:25px;
+}
+
+.sustainability-cta p{
+    max-width:760px;
+    margin:auto;
+    margin-bottom:45px;
+    color:#e7e7e7;
+    line-height:1.9;
+    font-size:1.05rem;
+}
+
+.cta-buttons{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.cta-buttons .primary-btn{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.cta-buttons .secondary-btn{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+/* =====================================================
+   ANIMATIONS
+===================================================== */
+
+.commitment-image img,
+.esg-image img,
+.safety-image img,
+.community-image img{
+    transition:.45s;
+}
+
+.commitment-image:hover img,
+.esg-image:hover img,
+.safety-image:hover img,
+.community-image:hover img{
+    transform:scale(1.03);
+}
+
+.feature,
+.feature-item{
+    transition:.3s;
+}
+
+.feature:hover,
+.feature-item:hover{
+    transform:translateX(10px);
+    color:#C9A227;
+}
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media(max-width:1200px){
+
+    .pillars-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+@media(max-width:992px){
+
+    .commitment-grid,
+    .esg-grid,
+    .safety-row,
+    .community-row{
+
+        grid-template-columns:1fr;
+        gap:50px;
+
+    }
+
+    .community-row .community-image{
+        order:-1;
+    }
+
+    .commitment-content,
+    .esg-content,
+    .safety-content,
+    .community-content{
+        text-align:center;
+    }
+
+    .feature,
+    .feature-item{
+        justify-content:center;
+    }
+
+    .esg-card{
+        text-align:left;
+    }
+
+}
+
+@media(max-width:768px){
+
+    .sustainability-hero{
+        min-height:550px;
+    }
+
+    .sustainability-hero h1{
+        font-size:2.8rem;
+    }
+
+    .section-heading h2,
+    .commitment-content h2,
+    .esg-content h2,
+    .safety-content h2,
+    .community-content h2,
+    .sustainability-cta h2{
+        font-size:2.2rem;
+    }
+
+    .pillars-grid{
+        grid-template-columns:1fr;
+    }
+
+    .esg-card{
+        flex-direction:column;
+        text-align:center;
+        align-items:center;
+    }
+
+}
+
+@media(max-width:576px){
+
+    .sustainability-hero h1{
+        font-size:2.2rem;
+    }
+
+    .section-heading h2,
+    .commitment-content h2,
+    .esg-content h2,
+    .safety-content h2,
+    .community-content h2,
+    .sustainability-cta h2{
+        font-size:1.8rem;
+    }
+
+    .pillar-card{
+        padding:35px 25px;
+    }
+
+    .cta-buttons{
+        flex-direction:column;
+    }
+
+    .primary-btn,
+    .secondary-btn{
+        width:100%;
+        justify-content:center;
+    }
+
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.esg-section {
+  scroll-margin-top: 100px;
+}

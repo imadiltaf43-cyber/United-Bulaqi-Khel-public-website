@@ -1,0 +1,427 @@
+/* ==========================================
+   GOOGLE FONT
+========================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* ==========================================
+   VARIABLES
+========================================== */
+
+:root{
+
+    --gold:#C7A23F;
+    --gold-dark:#b58f2d;
+    --black:#0f0f0f;
+    --white:#ffffff;
+    --gray:#d7d7d7;
+
+}
+
+/* ==========================================
+   NAVBAR
+========================================== */
+
+.main-navbar{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    z-index:9999;
+
+    transition:.4s ease;
+
+    background:transparent;
+
+}
+
+.main-navbar.scrolled{
+
+    background:linear-gradient(
+    90deg,
+    rgba(194,156,51,.97),
+    rgba(210,174,76,.97));
+
+    backdrop-filter:blur(10px);
+
+    box-shadow:0 3px 18px rgba(0,0,0,.18);
+
+}
+
+/* ==========================================
+   CONTAINER
+========================================== */
+
+.nav-container{
+
+    width:95%;
+
+    max-width:1500px;
+
+    margin:auto;
+
+    height:90px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+}
+
+/* ==========================================
+   LOGO
+========================================== */
+
+.brand{
+
+    display:flex;
+
+    align-items:center;
+
+    text-decoration:none;
+
+    gap:15px;
+
+}
+
+.brand-logo{
+
+    width:62px;
+
+    transition:.35s;
+
+}
+
+.main-navbar.scrolled .brand-logo{
+
+    width:54px;
+
+}
+
+.brand-text{
+
+    display:flex;
+
+    flex-direction:column;
+
+    line-height:1.05;
+
+}
+
+.brand-text h4{
+
+    margin:0;
+
+    font-family:'Cinzel',serif;
+
+    font-size:15px;
+
+    color:white;
+
+    letter-spacing:2px;
+
+}
+
+.brand-text h3{
+
+    margin:0;
+
+    font-family:'Cinzel',serif;
+
+    font-size:21px;
+
+    color:white;
+
+    font-weight:700;
+
+}
+
+.brand-text span{
+
+    color:#eeeeee;
+
+    letter-spacing:4px;
+
+    font-size:11px;
+
+}
+
+/* ==========================================
+   DESKTOP MENU
+========================================== */
+
+.desktop-menu{
+
+    display:flex;
+    align-items:center;
+    gap:26px;
+
+}
+
+.desktop-menu a{
+
+    position:relative;
+    text-decoration:none;
+    color:white;
+    font-size:15px;
+    font-weight:500;
+    transition:.3s;
+    padding:5px 0;
+
+}
+
+/* ---------- Top (Transparent Navbar) ---------- */
+
+.desktop-menu a:hover{
+
+    color:var(--gold);
+
+}
+
+.desktop-menu a.active{
+
+    color:var(--gold);
+    font-weight:600;
+
+}
+
+.desktop-menu a::after{
+
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-8px;
+    width:0;
+    height:2px;
+    background:var(--gold);
+    transition:.3s;
+
+}
+
+.desktop-menu a:hover::after,
+.desktop-menu a.active::after{
+
+    width:100%;
+
+}
+
+/* ---------- After Scroll (Gold Navbar) ---------- */
+
+.main-navbar.scrolled .desktop-menu a{
+
+    color:white;
+
+}
+
+.main-navbar.scrolled .desktop-menu a:hover{
+
+    color:#111;
+
+}
+
+.main-navbar.scrolled .desktop-menu a.active{
+
+    color:#111;
+
+}
+
+.main-navbar.scrolled .desktop-menu a::after{
+
+    background:#111;
+
+}
+
+/* ==========================================
+   MOBILE BUTTON
+========================================== */
+
+.mobile-btn{
+
+    display:none;
+
+    background:none;
+
+    border:none;
+
+    color:white;
+
+    font-size:30px;
+
+    cursor:pointer;
+
+}
+
+/* ==========================================
+   MOBILE MENU
+========================================== */
+
+.mobile-menu{
+
+    position:absolute;
+
+    top:90px;
+
+    left:0;
+
+    width:100%;
+
+    background:#151515;
+
+    display:flex;
+
+    flex-direction:column;
+
+    max-height:0;
+
+    overflow:hidden;
+
+    transition:max-height .45s ease;
+
+}
+
+.mobile-menu.active{
+
+    max-height:700px;
+
+}
+
+.mobile-menu a{
+
+    text-decoration:none;
+
+    color:white;
+
+    padding:18px 28px;
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+
+    transition:.3s;
+
+}
+
+.mobile-menu a:hover{
+
+    background:rgba(199,162,63,.15);
+
+    color:var(--gold);
+
+}
+
+.mobile-menu a.active{
+
+    color:var(--gold);
+
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media(max-width:1200px){
+
+.desktop-menu{
+
+display:none;
+
+}
+
+.mobile-btn{
+
+display:block;
+
+}
+
+}
+
+@media(min-width:1201px){
+
+.mobile-menu{
+
+display:none;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.nav-container{
+
+height:82px;
+
+}
+
+.brand-logo{
+
+width:52px;
+
+}
+
+.brand-text h3{
+
+font-size:17px;
+
+}
+
+.brand-text h4{
+
+font-size:13px;
+
+}
+
+.brand-text span{
+
+font-size:9px;
+
+letter-spacing:2px;
+
+}
+
+.mobile-menu{
+
+top:82px;
+
+}
+
+}
+
+@media(max-width:480px){
+
+.brand{
+
+gap:10px;
+
+}
+
+.brand-logo{
+
+width:46px;
+
+}
+
+.brand-text h3{
+
+font-size:15px;
+
+}
+
+.brand-text h4{
+
+font-size:11px;
+
+}
+
+.brand-text span{
+
+display:none;
+
+}
+
+}

@@ -1,0 +1,83 @@
+.career-filters{
+    margin-top:70px;
+}
+
+.career-filter-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:35px;
+    flex-wrap:wrap;
+    gap:20px;
+}
+
+.career-filter-top h2{
+    font-size:2rem;
+    font-weight:700;
+    color:#111;
+}
+
+.career-filter-top p{
+    color:#666;
+    margin-top:8px;
+}
+
+.career-total-jobs{
+    background:#111;
+    color:#fff;
+    border-radius:18px;
+    padding:18px 30px;
+    text-align:center;
+    min-width:150px;
+}
+
+.career-total-jobs span{
+    display:block;
+    font-size:2rem;
+    color:#C9A227;
+    font-weight:700;
+}
+
+.career-filter-box{
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr;
+    gap:20px;
+    background:#fff;
+    padding:25px;
+    border-radius:18px;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+.career-search{
+    display:flex;
+    align-items:center;
+    border:1px solid #ddd;
+    border-radius:12px;
+    padding:0 15px;
+}
+
+.career-search input{
+    border:none;
+    outline:none;
+    width:100%;
+    height:55px;
+    margin-left:10px;
+}
+
+.career-filter-box select{
+    height:55px;
+    border-radius:12px;
+    border:1px solid #ddd;
+    padding:0 15px;
+    outline:none;
+}
+
+@media(max-width:991px){
+
+.career-filter-box{
+
+grid-template-columns:1fr;
+
+}
+
+}

@@ -1,0 +1,49 @@
+
+.investor-banner{
+position:relative;
+height:55vh;
+min-height:380px;
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+}
+.investor-banner .overlay{
+position:absolute;inset:0;
+background:linear-gradient(rgba(10,15,20,.72),rgba(10,15,20,.9));
+display:flex;align-items:center;
+}
+.investor-banner .container{position:relative;z-index:2}
+.investor-banner span{color:#d4af37;font-size:14px}
+.investor-banner h1{color:#fff;font-size:58px;margin-top:12px;font-weight:800}
+.investor-details{padding:90px 0;background:#f7f8fa}
+.details-grid{display:grid;grid-template-columns:380px 1fr;gap:60px}
+.left img{width:100%;background:#fff;padding:30px;border-radius:18px;box-shadow:0 15px 40px rgba(0,0,0,.12);object-fit:contain}
+.right h2{font-size:42px;color:#111;margin-bottom:15px}
+.right>p{color:#666;line-height:1.8;margin-bottom:35px}
+.investor-info-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.investor-info-grid>div{background:#161b22;color:#fff;padding:24px;border-radius:16px;transition:.3s;border:1px solid rgba(255,255,255,.05)}
+.investor-info-grid>div:hover{transform:translateY(-6px);border-color:#d4af37}
+.investor-info-grid svg{font-size:24px;color:#d4af37;margin-bottom:12px}
+.investor-info-grid h4{margin:0 0 8px;font-size:16px}
+.investor-info-grid span{color:#d0d0d0;font-size:15px;word-break:break-word}
+.status{margin-top:35px;font-weight:700;color:#111}
+.status span{margin-left:15px;background:#d4af37;color:#111;padding:8px 18px;border-radius:25px}
+.remarks{margin-top:35px;background:#fff;padding:30px;border-radius:16px;box-shadow:0 10px 30px rgba(0,0,0,.08)}
+.remarks h3{margin-bottom:12px}
+.remarks p{color:#666;line-height:1.8}
+.back-btn{display:inline-flex;align-items:center;gap:10px;margin-top:35px;background:#161b22;color:#fff;text-decoration:none;padding:14px 24px;border-radius:10px;font-weight:700;transition:.3s}
+.back-btn:hover{background:#d4af37;color:#111}
+.loading{text-align:center;padding:120px 0;font-size:24px}
+@media(max-width:992px){
+.details-grid{grid-template-columns:1fr}
+.left{max-width:420px;margin:auto}
+.investor-info-grid{grid-template-columns:1fr}
+.investor-banner h1{font-size:42px}
+}
+@media(max-width:576px){
+.investor-banner{height:45vh;min-height:300px}
+.investor-banner h1{font-size:32px}
+.right h2{font-size:30px}
+.investor-details{padding:60px 0}
+}

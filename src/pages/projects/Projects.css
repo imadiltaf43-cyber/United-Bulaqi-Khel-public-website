@@ -1,0 +1,161 @@
+/* ===========================
+   Projects Hero
+=========================== */
+
+.projects-hero {
+  position: relative;
+  height: 55vh;
+  min-height: 420px;
+  background: url("/images/projects-banner.jpg") center center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.projects-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 10, 10, .72);
+}
+
+.projects-hero .container {
+  position: relative;
+  z-index: 2;
+}
+
+.projects-hero .breadcrumb {
+  display: inline-block;
+  color: #d4af37;
+  margin-bottom: 18px;
+  font-size: 15px;
+  letter-spacing: .5px;
+}
+
+.projects-hero h1 {
+  color: white;
+  font-size: 58px;
+  font-weight: 800;
+  margin-bottom: 18px;
+}
+
+.projects-hero h1 span {
+  color: #d4af37;
+}
+
+.projects-hero p {
+  color: rgba(255,255,255,.85);
+  max-width: 700px;
+  line-height: 1.8;
+  font-size: 17px;
+}
+
+/* ===========================
+   Main Section
+=========================== */
+
+.projects-section {
+  background: #0f0f0f;
+  padding: 90px 0;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 35px;
+}
+
+/* ===========================
+   Loading
+=========================== */
+
+.loading {
+  text-align: center;
+  padding: 120px 0;
+  color: white;
+  font-size: 20px;
+}
+
+/* ===========================
+   CTA
+=========================== */
+
+.projects-cta {
+  background: linear-gradient(135deg,#111,#1a1a1a);
+  padding: 90px 20px;
+  text-align: center;
+}
+
+.projects-cta h2 {
+  color: white;
+  font-size: 42px;
+  margin-bottom: 20px;
+}
+
+.projects-cta p {
+  color: rgba(255,255,255,.75);
+  max-width: 760px;
+  margin: auto;
+  line-height: 1.9;
+  font-size: 16px;
+}
+
+.cta-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+  padding: 15px 38px;
+  background: #d4af37;
+  color: #111;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: .35s;
+}
+
+.cta-btn:hover {
+  background: white;
+  transform: translateY(-4px);
+}
+
+/* ===========================
+   Responsive
+=========================== */
+
+@media (max-width:1200px){
+
+.projects-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+@media (max-width:768px){
+
+.projects-hero{
+height:45vh;
+min-height:330px;
+}
+
+.projects-hero h1{
+font-size:38px;
+}
+
+.projects-hero p{
+font-size:15px;
+}
+
+.projects-grid{
+grid-template-columns:1fr;
+}
+
+.projects-cta h2{
+font-size:32px;
+}
+
+.projects-cta{
+padding:70px 20px;
+}
+
+}

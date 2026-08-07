@@ -1,0 +1,570 @@
+/* ======================================================
+   EQUIPMENT SECTION
+====================================================== */
+
+.equipment-section {
+    background: #111111;
+    padding: 100px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.equipment-section .container {
+    max-width: 1350px;
+}
+
+/* ======================================================
+   HEADING
+====================================================== */
+
+.equipment-heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 22px;
+    margin-bottom: 65px;
+}
+
+.heading-line {
+    width: 90px;
+    height: 2px;
+    background: #c79c41;
+}
+
+.equipment-heading h2 {
+    color: #fff;
+    font-size: 2.2rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+/* ======================================================
+   SLIDER
+====================================================== */
+
+.equipment-slider {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.slider-btn {
+
+    width: 50px;
+    height: 50px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #1d1d1d;
+
+    color: #d0a548;
+
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: .25s ease;
+}
+
+.slider-btn:hover {
+
+    background: #292929;
+
+    color: white;
+
+}
+
+.equipment-cards {
+
+    flex: 1;
+
+    display: grid;
+
+    grid-template-columns: repeat(5,1fr);
+
+    gap: 25px;
+
+}
+
+/* ======================================================
+   CARD
+====================================================== */
+
+.equipment-card {
+
+    background: #fff;
+
+    border-radius: 14px;
+
+    overflow: hidden;
+
+    cursor: pointer;
+
+    transition: .30s ease;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,.15);
+
+}
+
+.equipment-card:hover{
+
+    transform: translateY(-8px);
+
+    box-shadow: 0 20px 45px rgba(0,0,0,.22);
+
+}
+
+.equipment-image{
+
+    height: 220px;
+
+    overflow: hidden;
+
+}
+
+.equipment-image img{
+
+    width:100%;
+    height:100%;
+    object-fit:cover;
+
+    transition:.45s;
+
+}
+
+.equipment-card:hover img{
+
+    transform:scale(1.08);
+
+}
+
+.equipment-card-footer{
+
+    padding:20px;
+
+    text-align:center;
+
+    background:white;
+
+}
+
+.equipment-card-footer h4{
+
+    margin:0;
+
+    font-size:1.05rem;
+
+    color:#1b1b1b;
+
+    font-weight:600;
+
+    letter-spacing:.5px;
+
+}
+
+/* ======================================================
+   MODAL OVERLAY
+====================================================== */
+
+.equipment-modal-overlay{
+
+    position:fixed;
+    inset:0;
+
+    background:rgba(0,0,0,.75);
+
+    backdrop-filter:blur(8px);
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:40px;
+
+    z-index:9999;
+
+    animation:fadeIn .35s ease;
+
+}
+
+/* ======================================================
+   MODAL
+====================================================== */
+
+.equipment-modal{
+
+    width:min(1180px,95vw);
+
+    background:#ffffff;
+
+    border-radius:22px;
+
+    overflow:hidden;
+
+    display:grid;
+
+    grid-template-columns:48% 52%;
+
+    position:relative;
+
+    box-shadow:
+        0 35px 90px rgba(0,0,0,.35);
+
+    animation:popup .35s ease;
+
+}
+
+/* ======================================================
+   IMAGE
+====================================================== */
+
+.equipment-modal-image{
+
+    position:relative;
+
+    min-height:620px;
+
+    overflow:hidden;
+
+}
+
+.equipment-modal-image img{
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    display:block;
+
+}
+
+/* ======================================================
+   CONTENT
+====================================================== */
+
+.equipment-modal-content{
+
+    padding:60px;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+
+}
+
+/* ======================================================
+   CLOSE BUTTON
+====================================================== */
+
+.equipment-close{
+
+    position:absolute;
+
+    top:22px;
+    right:22px;
+
+    width:46px;
+    height:46px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.95);
+
+    color:#222;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    cursor:pointer;
+
+    font-size:18px;
+
+    transition:.25s;
+
+    z-index:10;
+
+}
+
+.equipment-close:hover{
+
+    background:#c79c41;
+
+    color:white;
+
+    transform:rotate(90deg);
+
+}
+
+
+/* ======================================================
+   TYPOGRAPHY
+====================================================== */
+
+.equipment-tag{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    width:max-content;
+
+    padding:8px 18px;
+
+    background:#f4e5c3;
+
+    color:#9b6d10;
+
+    border-radius:30px;
+
+    font-size:.8rem;
+
+    font-weight:700;
+
+    letter-spacing:1px;
+
+    text-transform:uppercase;
+
+    margin-bottom:22px;
+
+}
+
+.equipment-modal-content h2{
+
+    font-size:2.5rem;
+
+    font-weight:700;
+
+    color:#111;
+
+    margin-bottom:18px;
+
+    line-height:1.2;
+
+}
+
+.equipment-modal-content p{
+
+    color:#666;
+
+    line-height:1.9;
+
+    font-size:1rem;
+
+    margin-bottom:35px;
+
+}
+
+.equipment-modal-content h4{
+
+    font-size:1.15rem;
+
+    color:#222;
+
+    margin-bottom:20px;
+
+    font-weight:700;
+
+}
+
+/* ======================================================
+   APPLICATIONS
+====================================================== */
+
+.equipment-modal-content ul{
+
+    list-style:none;
+
+    padding:0;
+
+    margin:0;
+
+    display:grid;
+
+    gap:18px;
+
+}
+
+.equipment-modal-content li{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+    color:#444;
+
+    font-size:.98rem;
+
+    font-weight:500;
+
+}
+
+.equipment-modal-content li svg{
+
+    color:#c79c41;
+
+    font-size:18px;
+
+    flex-shrink:0;
+
+}
+
+/* ======================================================
+   ANIMATIONS
+====================================================== */
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+    }
+
+    to{
+
+        opacity:1;
+
+    }
+
+}
+
+@keyframes popup{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(30px) scale(.95);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0) scale(1);
+
+    }
+
+}
+
+/* ======================================================
+   RESPONSIVE
+====================================================== */
+
+@media (max-width:1200px){
+
+    .equipment-cards{
+
+        grid-template-columns:repeat(3,1fr);
+
+    }
+
+}
+
+@media (max-width:992px){
+
+    .equipment-modal{
+
+        grid-template-columns:1fr;
+
+        max-height:90vh;
+
+        overflow-y:auto;
+
+    }
+
+    .equipment-modal-image{
+
+        min-height:320px;
+
+    }
+
+    .equipment-modal-content{
+
+        padding:40px;
+
+    }
+
+}
+
+@media (max-width:768px){
+
+    .equipment-cards{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+    .equipment-heading h2{
+
+        font-size:1.7rem;
+
+    }
+
+    .equipment-modal-content h2{
+
+        font-size:2rem;
+
+    }
+
+}
+
+@media (max-width:576px){
+
+    .equipment-section{
+
+        padding:70px 0;
+
+    }
+
+    .equipment-cards{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .equipment-slider{
+
+        gap:10px;
+
+    }
+
+    .slider-btn{
+
+        width:42px;
+        height:42px;
+
+    }
+
+    .equipment-modal-content{
+
+        padding:28px;
+
+    }
+
+    .equipment-modal-content h2{
+
+        font-size:1.6rem;
+
+    }
+
+    .equipment-modal-content p{
+
+        font-size:.95rem;
+
+    }
+
+}
+

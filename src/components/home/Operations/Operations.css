@@ -1,0 +1,179 @@
+/* =========================================
+   OPERATIONS SECTION
+========================================= */
+
+.operations-section {
+    background: #ffffff;
+    padding: 90px 0;
+}
+
+.operations-heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 70px;
+}
+
+.operations-heading h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+.heading-line {
+    width: 90px;
+    height: 2px;
+    background: #c8a04d;
+}
+
+/* =========================================
+   TIMELINE
+========================================= */
+
+.operations-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
+    gap: 20px;
+}
+
+.operation-item {
+    flex: 1;
+    position: relative;
+    text-align: center;
+}
+
+/* =========================================
+   ICON
+========================================= */
+
+.operation-icon {
+    width: 90px;
+    height: 90px;
+
+    margin: auto;
+
+    border-radius: 50%;
+
+    background: #fff;
+
+    border: 1px solid #e6e6e6;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 34px;
+    color: #c8a04d;
+}
+
+.operation-item h4 {
+    margin-top: 22px;
+
+    font-size: 16px;
+
+    color: #222;
+
+    font-weight: 600;
+
+    line-height: 1.5;
+}
+
+/* =========================================
+   CONNECTOR
+========================================= */
+
+.operation-arrow {
+    position: absolute;
+
+    top: 36px;
+
+    right: -15px;
+
+    color: #c8a04d;
+
+    font-size: 22px;
+
+    z-index: 10;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width:992px) {
+
+    .operations-wrapper {
+
+        display: grid;
+
+        grid-template-columns: repeat(3,1fr);
+
+        gap: 40px;
+
+    }
+
+    .operation-arrow {
+
+        display: none;
+
+    }
+
+}
+
+@media (max-width:768px) {
+
+    .operations-heading {
+
+        gap: 15px;
+
+    }
+
+    .heading-line {
+
+        width: 45px;
+
+    }
+
+    .operations-wrapper {
+
+        grid-template-columns: repeat(2,1fr);
+
+    }
+
+}
+
+@media (max-width:576px) {
+
+    .operations-section {
+
+        padding: 70px 0;
+
+    }
+
+    .operations-heading h2 {
+
+        font-size: 1.6rem;
+
+    }
+
+    .operations-wrapper {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .operation-icon {
+
+        width: 80px;
+        height: 80px;
+
+        font-size: 30px;
+
+    }
+
+}

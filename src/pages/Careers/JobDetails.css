@@ -1,0 +1,203 @@
+/* ==============================
+   Job Details Page
+============================== */
+
+.job-details-page {
+  background: #f7f8fa;
+  min-height: 100vh;
+  padding-bottom: 80px;
+}
+
+/* ==============================
+   Hero Banner
+============================== */
+
+.job-banner {
+  position: relative;
+  height: 430px;
+  overflow: hidden;
+}
+
+.job-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.banner-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    rgba(0,0,0,.65),
+    rgba(0,0,0,.65)
+  );
+  display: flex;
+  align-items: center;
+}
+
+.banner-overlay span {
+  display: inline-block;
+  background: #C9A227;
+  color: #fff;
+  padding: 8px 18px;
+  border-radius: 30px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.banner-overlay h1 {
+  color: #fff;
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+/* ==============================
+   Layout
+============================== */
+
+.job-detail-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 40px;
+  margin-top: 60px;
+}
+
+.job-main {
+  background: white;
+  border-radius: 18px;
+  padding: 40px;
+  box-shadow: 0 15px 35px rgba(0,0,0,.08);
+}
+
+.job-main h2 {
+  margin-bottom: 25px;
+  color: #111;
+  font-size: 2rem;
+}
+
+.job-main h3 {
+  margin-top: 40px;
+  margin-bottom: 15px;
+  color: #1E4D3B;
+}
+
+.job-main p {
+  color: #666;
+  line-height: 1.9;
+}
+
+.job-main ul {
+  margin-top: 15px;
+  padding-left: 20px;
+}
+
+.job-main li {
+  margin-bottom: 12px;
+  color: #555;
+  line-height: 1.7;
+}
+
+/* ==============================
+   Sidebar
+============================== */
+
+.job-sidebar {
+  position: sticky;
+  top: 120px;
+  align-self: start;
+}
+
+.job-info-box {
+  background: white;
+  border-radius: 18px;
+  padding: 30px;
+  box-shadow: 0 15px 35px rgba(0,0,0,.08);
+}
+
+.job-info-box div {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.job-info-box div:last-child {
+  border-bottom: none;
+}
+
+.job-info-box svg {
+  color: #C9A227;
+  font-size: 18px;
+}
+
+.job-info-box span {
+  color: #444;
+  font-weight: 500;
+}
+
+.apply-job-btn {
+  margin-top: 25px;
+  width: 100%;
+  height: 58px;
+  border-radius: 12px;
+  background: #111;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: .3s;
+}
+
+.apply-job-btn:hover {
+  background: #C9A227;
+  color: white;
+}
+
+/* ==============================
+   Loading
+============================== */
+
+.job-loading {
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+/* ==============================
+   Responsive
+============================== */
+
+@media (max-width: 992px) {
+
+  .job-detail-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .job-sidebar {
+    position: static;
+  }
+
+  .banner-overlay h1 {
+    font-size: 2.2rem;
+  }
+
+}
+
+@media (max-width: 576px) {
+
+  .job-main {
+    padding: 25px;
+  }
+
+  .banner-overlay h1 {
+    font-size: 1.8rem;
+  }
+
+}

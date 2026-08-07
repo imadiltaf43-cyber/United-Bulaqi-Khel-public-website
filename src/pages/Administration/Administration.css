@@ -1,0 +1,234 @@
+/* ===========================================
+   Administration Hero
+=========================================== */
+
+.administration-hero{
+
+    position:relative;
+
+    height:55vh;
+
+    min-height:420px;
+
+    display:flex;
+
+    align-items:center;
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-repeat:no-repeat;
+
+}
+
+.administration-hero .overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+        rgba(10,10,10,.70),
+        rgba(10,10,10,.60)
+    );
+
+}
+
+.administration-hero .container{
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+.hero-content{
+
+    max-width:760px;
+
+    color:#fff;
+
+}
+
+.hero-content span{
+
+    display:block;
+
+    color:#c89b2b;
+
+    font-size:14px;
+
+    font-weight:700;
+
+    letter-spacing:3px;
+
+    text-transform:uppercase;
+
+    margin-bottom:20px;
+
+}
+
+.hero-content h1{
+
+    font-size:64px;
+
+    font-weight:800;
+
+    line-height:1.1;
+
+    margin-bottom:20px;
+
+}
+
+.hero-content p{
+
+    font-size:18px;
+
+    line-height:1.8;
+
+    color:#f1f1f1;
+
+    max-width:700px;
+
+}
+
+/* ===========================================
+   Page Background
+=========================================== */
+
+.administration-page{
+
+    background:#f8f9fa;
+
+}
+
+/* ===========================================
+   Loading
+=========================================== */
+
+.spinner-border{
+
+    width:3rem;
+
+    height:3rem;
+
+}
+
+/* ===========================================
+   Section Spacing
+=========================================== */
+
+.employee-section{
+
+    background:#fff;
+
+}
+
+.employee-section:nth-child(even){
+
+    background:#fafafa;
+
+}
+
+/* ===========================================
+   Responsive
+=========================================== */
+
+@media(max-width:1200px){
+
+    .hero-content h1{
+
+        font-size:56px;
+
+    }
+
+}
+
+@media(max-width:992px){
+
+    .administration-hero{
+
+        height:48vh;
+
+        min-height:380px;
+
+    }
+
+    .hero-content h1{
+
+        font-size:46px;
+
+    }
+
+    .hero-content p{
+
+        font-size:17px;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .administration-hero{
+
+        height:42vh;
+
+        min-height:330px;
+
+    }
+
+    .hero-content{
+
+        text-align:center;
+
+        margin:auto;
+
+    }
+
+    .hero-content h1{
+
+        font-size:36px;
+
+    }
+
+    .hero-content span{
+
+        letter-spacing:2px;
+
+        font-size:13px;
+
+    }
+
+    .hero-content p{
+
+        font-size:16px;
+
+        line-height:1.7;
+
+    }
+
+}
+
+@media(max-width:576px){
+
+    .administration-hero{
+
+        min-height:300px;
+
+    }
+
+    .hero-content h1{
+
+        font-size:30px;
+
+    }
+
+    .hero-content p{
+
+        font-size:15px;
+
+    }
+
+}

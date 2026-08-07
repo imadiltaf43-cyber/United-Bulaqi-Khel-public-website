@@ -1,0 +1,574 @@
+:root{
+    --gold:#D4AF37;
+    --gold-light:#E7C85A;
+    --black:#0f0f0f;
+    --white:#ffffff;
+}
+
+/* ===========================================
+   HERO
+=========================================== */
+
+.hero{
+
+    position:relative;
+
+    min-height:100vh;
+
+    display:flex;
+
+    align-items:center;
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-repeat:no-repeat;
+
+    overflow:hidden;
+
+    transition:background-image 1s ease;
+
+}
+
+.hero-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+    linear-gradient(
+        90deg,
+        rgba(0,0,0,.88) 0%,
+        rgba(0,0,0,.70) 35%,
+        rgba(0,0,0,.35) 60%,
+        rgba(0,0,0,.72) 100%
+    );
+
+}
+
+.hero-container{
+
+    position:relative;
+
+    z-index:5;
+
+    padding-top:120px;
+
+    padding-bottom:70px;
+
+}
+
+/* ===========================================
+   LAYOUT
+=========================================== */
+
+.hero-wrapper{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:90px;
+
+}
+
+.hero-left{
+
+    flex:1;
+
+    max-width:720px;
+
+}
+
+.hero-right{
+
+    flex:0 0 390px;
+
+    max-width:390px;
+
+    min-width:390px;
+
+    display:flex;
+
+    justify-content:flex-end;
+
+    align-items:center;
+
+}
+
+/* ===========================================
+   TEXT
+=========================================== */
+
+.hero-tag{
+
+    display:inline-block;
+
+    margin-bottom:24px;
+
+    color:var(--gold);
+
+    font-size:15px;
+
+    letter-spacing:4px;
+
+    font-weight:700;
+
+    text-transform:uppercase;
+
+}
+
+.hero-left h1{
+
+    color:#fff;
+
+    font-size:78px;
+
+    font-weight:800;
+
+    line-height:1.05;
+
+    margin-bottom:28px;
+
+}
+
+.hero-left h1 span{
+
+    color:var(--gold);
+
+}
+
+.hero-left p{
+
+    font-size:21px;
+
+    color:#e8e8e8;
+
+    line-height:1.9;
+
+    margin-bottom:45px;
+
+    max-width:620px;
+
+}
+
+/* ===========================================
+   BUTTONS
+=========================================== */
+
+.hero-buttons{
+
+    display:flex;
+
+    gap:18px;
+
+    flex-wrap:wrap;
+
+}
+
+.gold-btn,
+.video-btn{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:10px;
+
+    height:62px;
+
+    padding:0 30px;
+
+    border-radius:14px;
+
+    text-decoration:none;
+
+    transition:.35s;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+}
+
+.gold-btn{
+
+    background:linear-gradient(
+        135deg,
+        var(--gold),
+        var(--gold-light)
+    );
+
+    color:#111;
+
+    border:none;
+
+}
+
+.gold-btn:hover{
+
+    transform:translateY(-4px);
+
+    color:#111;
+
+}
+
+.video-btn{
+
+    background:transparent;
+
+    border:2px solid rgba(255,255,255,.20);
+
+    color:#fff;
+
+}
+
+.video-btn:hover{
+
+    border-color:var(--gold);
+
+    background:rgba(212,175,55,.10);
+
+}
+
+/* ===========================================
+   STATS CARD
+=========================================== */
+
+.stats-card{
+
+    width:390px;
+
+    background:rgba(18,18,18,.55);
+
+    backdrop-filter:blur(22px);
+
+    border:1px solid rgba(212,175,55,.18);
+
+    border-radius:28px;
+
+    overflow:hidden;
+
+    box-shadow:
+    0 25px 60px rgba(0,0,0,.45);
+
+}
+
+.stats-header{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:16px;
+
+    padding:24px 28px;
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+
+}
+
+.stats-line{
+
+    width:45px;
+
+    height:2px;
+
+    background:var(--gold);
+
+}
+
+.stats-header h5{
+
+    margin:0;
+
+    color:var(--gold);
+
+    letter-spacing:2px;
+
+    font-size:14px;
+
+    font-weight:700;
+
+}
+
+.stat{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:20px;
+
+    padding:24px 28px;
+
+    transition:.35s;
+
+}
+
+.stat:not(:last-child){
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+
+}
+
+.stat:hover{
+
+    background:rgba(212,175,55,.06);
+
+}
+
+.stat-icon{
+
+    color:#D4AF37;
+
+    flex-shrink:0;
+
+    transition:.35s ease;
+
+    filter:
+        drop-shadow(0 0 10px rgba(212,175,55,.15));
+
+}
+
+.stat:hover .stat-icon{
+
+    transform:scale(1.12);
+
+    color:#f3c74b;
+
+}
+
+.stat-content{
+
+    flex:1;
+
+}
+
+.stat-content h2{
+
+    font-size:48px;
+
+    font-weight:800;
+
+    color:#fff;
+
+    margin:0;
+
+}
+
+.stat-content p{
+
+    margin-top:6px;
+
+    color:#d7d7d7;
+
+    font-size:17px;
+
+    letter-spacing:.5px;
+
+}
+/* ===========================================
+   DOTS
+=========================================== */
+
+.slider-dots{
+
+    position:absolute;
+
+    left:50%;
+
+    bottom:35px;
+
+    transform:translateX(-50%);
+
+    display:flex;
+
+    gap:12px;
+
+    z-index:20;
+
+}
+
+.dot{
+
+    width:12px;
+
+    height:12px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.35);
+
+    cursor:pointer;
+
+    transition:.35s;
+
+}
+
+.dot.active{
+
+    width:40px;
+
+    border-radius:20px;
+
+    background:var(--gold);
+
+}
+
+/* ===========================================
+   RESPONSIVE
+=========================================== */
+
+@media(max-width:1200px){
+
+.hero-left h1{
+
+font-size:66px;
+
+}
+
+.hero-wrapper{
+
+gap:60px;
+
+}
+
+}
+
+@media(max-width:992px){
+
+.hero{
+
+min-height:auto;
+
+}
+
+.hero-wrapper{
+
+flex-direction:column;
+
+text-align:center;
+
+}
+
+.hero-left{
+
+max-width:100%;
+
+}
+
+.hero-left p{
+
+margin-inline:auto;
+
+}
+
+.hero-buttons{
+
+justify-content:center;
+
+}
+
+.hero-right{
+
+min-width:100%;
+
+max-width:100%;
+
+justify-content:center;
+
+}
+
+.stats-card{
+
+width:420px;
+
+margin-top:40px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.hero-left h1{
+
+font-size:50px;
+
+}
+
+.hero-left p{
+
+font-size:18px;
+
+}
+
+.gold-btn,
+.video-btn{
+
+width:100%;
+
+}
+
+.hero-buttons{
+
+flex-direction:column;
+
+}
+
+.stats-card{
+
+width:100%;
+
+}
+
+}
+
+@media(max-width:576px){
+
+.hero-container{
+
+padding-top:140px;
+
+}
+
+.hero-left h1{
+
+font-size:38px;
+
+}
+
+.hero-tag{
+
+font-size:13px;
+
+letter-spacing:2px;
+
+}
+
+.stat{
+
+padding:20px;
+
+}
+
+.stat-content h2{
+
+font-size:34px;
+
+}
+
+.stat-content p{
+
+white-space:normal;
+
+}
+
+}

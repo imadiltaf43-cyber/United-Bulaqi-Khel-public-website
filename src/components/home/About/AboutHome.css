@@ -1,0 +1,297 @@
+/* ===========================================
+   ABOUT HOME
+=========================================== */
+
+:root{
+    --gold:#C9A227;
+    --gold-light:#D8B84A;
+    --green:#3A8B52;
+    --black:#111111;
+    --gray:#666666;
+    --light:#f8f8f8;
+    --white:#ffffff;
+}
+
+.about-home{
+    width:100%;
+    background:#ffffff;
+    padding:110px 0;
+    overflow:hidden;
+}
+
+.about-home-inner{
+    display:grid;
+    grid-template-columns:minmax(320px, 1.05fr) minmax(360px, 0.95fr);
+    gap:60px;
+    align-items:center;
+}
+
+.about-home-left,
+.about-home-right{
+    width:100%;
+}
+
+/* ===========================================
+   IMAGE
+=========================================== */
+
+.about-image{
+    position:relative;
+    overflow:hidden;
+    border-radius:20px;
+    border:2px solid rgba(201,162,39,.18);
+    box-shadow:0 20px 45px rgba(0,0,0,.12);
+    transition:.45s;
+}
+
+.about-image img{
+    width:100%;
+    height:520px;
+    object-fit:cover;
+    display:block;
+    transition:.6s;
+}
+
+.about-image:hover img{
+    transform:scale(1.06);
+}
+
+.about-image:hover{
+    transform:translateY(-6px);
+    box-shadow:0 28px 55px rgba(0,0,0,.16);
+}
+
+/* ===========================================
+   RIGHT SIDE
+=========================================== */
+
+.about-small-title{
+    display:inline-block;
+    color:var(--gold);
+    font-size:.9rem;
+    font-weight:700;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    margin-bottom:18px;
+    position:relative;
+    padding-left:55px;
+}
+
+.about-small-title::before{
+    content:"";
+    position:absolute;
+    left:0;
+    top:50%;
+    transform:translateY(-50%);
+    width:40px;
+    height:2px;
+    background:var(--gold);
+}
+
+.about-home h2{
+    font-size:2.8rem;
+    font-weight:700;
+    color:var(--black);
+    margin-bottom:25px;
+    line-height:1.2;
+}
+
+.about-home p{
+    color:var(--gray);
+    font-size:1.02rem;
+    line-height:1.9;
+    margin-bottom:35px;
+}
+
+/* ===========================================
+   FEATURES
+=========================================== */
+
+.features{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:18px 30px;
+    margin-bottom:40px;
+}
+
+.features div{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    font-size:16px;
+    color:#333;
+    font-weight:500;
+    transition:.35s;
+}
+
+.features div svg{
+    color:var(--green);
+    font-size:20px;
+    flex-shrink:0;
+}
+
+.features div:hover{
+    transform:translateX(8px);
+    color:var(--gold);
+}
+
+/* ===========================================
+   BUTTON
+=========================================== */
+
+.about-btn{
+    background:linear-gradient(
+        135deg,
+        var(--gold),
+        var(--gold-light)
+    );
+
+    color:#111;
+    border:none;
+    padding:15px 34px;
+    border-radius:8px;
+    font-weight:700;
+    font-size:15px;
+    transition:.35s;
+    cursor:pointer;
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    text-decoration:none;
+}
+
+.about-btn:hover{
+    transform:translateY(-4px);
+    box-shadow:0 12px 30px rgba(201,162,39,.35);
+}
+
+/* ===========================================
+   ANIMATION
+=========================================== */
+
+.about-image,
+.about-home h2,
+.about-home p,
+.features,
+.about-btn{
+    transition:.5s ease;
+}
+
+/* ===========================================
+   RESPONSIVE
+=========================================== */
+
+@media(max-width:1200px){
+
+.about-home h2{
+    font-size:2.4rem;
+}
+
+.about-image img{
+    height:470px;
+}
+
+}
+
+@media(max-width:992px){
+
+.about-home{
+    padding:90px 0;
+}
+
+.about-home-inner{
+    grid-template-columns:1fr;
+    text-align:center;
+}
+
+.about-image{
+    margin-bottom:35px;
+}
+
+.about-image img{
+    height:420px;
+}
+
+.about-small-title{
+    padding-left:0;
+}
+
+.about-small-title::before{
+    display:none;
+}
+
+.features{
+    grid-template-columns:repeat(2,1fr);
+    justify-content:center;
+    text-align:left;
+}
+
+.about-btn{
+    margin:auto;
+}
+
+}
+
+@media(max-width:768px){
+
+.about-home{
+    padding:80px 0;
+}
+
+.about-home h2{
+    font-size:2rem;
+}
+
+.about-home p{
+    font-size:.95rem;
+}
+
+.about-image img{
+    height:340px;
+}
+
+.features{
+    grid-template-columns:1fr;
+    gap:16px;
+}
+
+.features div{
+    justify-content:center;
+}
+
+}
+
+@media(max-width:576px){
+
+.about-home{
+    padding:70px 0;
+}
+
+.about-home h2{
+    font-size:1.7rem;
+}
+
+.about-home p{
+    font-size:.92rem;
+    line-height:1.8;
+}
+
+.about-image{
+    border-radius:16px;
+}
+
+.about-image img{
+    height:280px;
+}
+
+.about-btn{
+    width:100%;
+    justify-content:center;
+    padding:14px;
+}
+
+.features div{
+    font-size:15px;
+}
+
+}
