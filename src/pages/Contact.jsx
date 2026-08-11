@@ -14,7 +14,7 @@ import heroBanner from "../assets/images/contact-banner.jpg";
 
 import { submitContact } from "../services/contactService";
 
-import "../styles/contact.css";
+import "../styles/Contact.css";
 
 export default function Contact() {
 
