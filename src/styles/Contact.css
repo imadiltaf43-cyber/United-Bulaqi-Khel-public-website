@@ -772,3 +772,186 @@
     color:#fff;
 
 }
+
+/* ================= DEVELOPMENT TEAM ================= */
+
+.development-team-section {
+  padding: 55px 0;
+  background: #f8f7f3;
+  border-top: 1px solid rgba(201, 162, 39, 0.2);
+}
+
+.development-heading {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.development-heading span {
+  display: block;
+  margin-bottom: 7px;
+
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+
+  color: #c9a227;
+}
+
+.development-heading h2 {
+  margin: 0;
+
+  font-size: 27px;
+  font-weight: 700;
+
+  color: #0f0f0f;
+}
+
+.developers-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.developer-card {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  gap: 15px;
+
+  padding: 20px;
+
+  background: #fff;
+
+  border: 1px solid #e6e2d8;
+  border-radius: 5px;
+}
+
+.developer-avatar {
+  width: 50px;
+  height: 50px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #0f0f0f;
+  border: 1px solid #c9a227;
+
+  color: #c9a227;
+
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.developer-details {
+  padding-right: 25px;
+}
+
+.developer-details h3 {
+  margin: 0 0 7px;
+
+  font-size: 16px;
+  font-weight: 700;
+
+  color: #111;
+}
+
+.developer-details p {
+  margin: 2px 0;
+
+  font-size: 11px;
+  line-height: 1.5;
+
+  color: #777;
+}
+
+.developer-details strong {
+  color: #333;
+}
+
+.developer-linkedin {
+  position: absolute;
+
+  right: 15px;
+  top: 15px;
+
+  width: 27px;
+  height: 27px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #0f0f0f;
+  color: #fff;
+
+  font-size: 12px;
+
+  text-decoration: none;
+
+  transition: 0.2s ease;
+}
+
+.developer-linkedin:hover {
+  background: #c9a227;
+  color: #0f0f0f;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 850px) {
+
+  .developers-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  .development-team-section {
+    padding: 45px 0;
+  }
+
+  .developers-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
+.developer-avatar {
+  width: 58px;
+  height: 58px;
+
+  flex-shrink: 0;
+
+  overflow: hidden;
+
+  border-radius: 50%;
+
+  border: 2px solid #c9a227;
+
+  background: #0f0f0f;
+}
+
+.developer-avatar img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+}

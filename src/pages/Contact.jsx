@@ -6,6 +6,7 @@ import {
   FaEnvelope,
   FaClock,
   FaPaperPlane,
+  FaLinkedinIn,
 } from "react-icons/fa";
 
 import { toast } from "react-toastify";
@@ -13,6 +14,10 @@ import { toast } from "react-toastify";
 import heroBanner from "../assets/images/contact-banner.jpg";
 
 import { submitContact } from "../services/contactService";
+
+import imadImage from "../assets/images/developers/imad.jpg";
+import khalfanImage from "../assets/images/developers/khalfan.jpg";
+import faizImage from "../assets/images/developers/faiz.jpg";
 
 import "../styles/Contact.css";
 
@@ -417,6 +422,145 @@ export default function Contact() {
         />
 
       </section>
+
+
+      {/* ================= DEVELOPMENT TEAM ================= */}
+
+<section className="development-team-section">
+
+  <div className="container">
+
+    <div className="development-heading">
+
+      <span>WEBSITE DEVELOPMENT</span>
+
+      <h2>Development Team</h2>
+
+    </div>
+
+    <div className="developers-grid">
+
+      {/* Syed Imad Iltaf */}
+
+      <div className="developer-card">
+
+        <div className="developer-avatar">
+          <img src={imadImage} alt="Syed Imad Iltaf" />
+        </div>
+
+        <div className="developer-details">
+
+          <h3>Syed Imad Iltaf</h3>
+
+          <p>
+            <strong>Role:</strong> Lead Developer
+          </p>
+
+          <p>
+            <strong>Education:</strong> Software Engineering
+          </p>
+
+          <p>
+            <strong>University:</strong> COMSATS University Islamabad
+          </p>
+
+        </div>
+
+        <a
+          href="https://www.linkedin.com/in/syed-imad-iltaf-b806782b1"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="developer-linkedin"
+          aria-label="Syed Imad Iltaf LinkedIn"
+        >
+          <FaLinkedinIn />
+        </a>
+
+      </div>
+
+
+      {/* Khalfan Afridi */}
+
+      <div className="developer-card">
+
+        <div className="developer-avatar">
+          <img src={khalfanImage} alt="Khalfan Afridi" />
+        </div>
+
+        <div className="developer-details">
+
+          <h3>Khalfan Afridi</h3>
+
+          <p>
+            <strong>Role:</strong> Developer
+          </p>
+
+          <p>
+            <strong>Education:</strong> Computer Science
+          </p>
+
+          <p>
+            <strong>University:</strong> COMSATS University Islamabad
+          </p>
+
+        </div>
+
+        <a
+          href="https://www.linkedin.com/in/khalfan-shah-afridi-009970370/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="developer-linkedin"
+          aria-label="Khalfan Afridi LinkedIn"
+        >
+          <FaLinkedinIn />
+        </a>
+
+      </div>
+
+
+      {/* Faiz Khan */}
+
+      <div className="developer-card">
+
+        <div className="developer-avatar">
+          <img src={faizImage} alt="Faiz Khan" />
+        </div>
+
+        <div className="developer-details">
+
+          <h3>Faaiz Khan</h3>
+
+          <p>
+            <strong>Role:</strong> Testing
+          </p>
+
+          <p>
+            <strong>Education:</strong> Computer Science
+          </p>
+
+          <p>
+            <strong>University:</strong> COMSATS University Islamabad
+          </p>
+
+        </div>
+
+        <a
+          href="https://www.linkedin.com/in/faaiz-khan0/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="developer-linkedin"
+          aria-label="Faiz Khan LinkedIn"
+        >
+          <FaLinkedinIn />
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
           </>
 
   );
