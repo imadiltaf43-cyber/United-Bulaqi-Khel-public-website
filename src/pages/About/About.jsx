@@ -100,15 +100,15 @@ export default function About() {
         <div className="about-overlay"></div>
 
         <div className="container about-hero-content">
-          <h1>ABOUT US</h1>
-
-          <div className="breadcrumb">
+          <div className="compact-hero-breadcrumb">
             <Link to="/">Home</Link>
-
             <span>/</span>
-
-            <p>About Us</p>
+            <span>About Us</span>
           </div>
+
+          <span className="compact-hero-tag">Who We Are</span>
+          <h1>ABOUT US</h1>
+          <div className="compact-hero-line"></div>
         </div>
       </section>
 

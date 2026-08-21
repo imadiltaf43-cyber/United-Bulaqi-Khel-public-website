@@ -14,21 +14,7 @@ export default function InvestorTable({
 
 }) {
 
-    const population =
-
-        village === "Barkali"
-
-            ? 3500
-
-            : 3164;
-
-    const totalShares = investors.reduce(
-
-        (sum, investor) => sum + Number(investor.shares),
-
-        0
-
-    );
+    const totalShares = village === "Barkali" ? 3500 : 3160;
 
     return (
 
@@ -64,7 +50,7 @@ export default function InvestorTable({
 
                         <p>
 
-                            Complete shareholder list of {village} village.
+                            Complete shareholder list of {village} section.
 
                         </p>
 
@@ -75,26 +61,6 @@ export default function InvestorTable({
                 {/* Stats */}
 
                 <div className="row g-4 mb-5">
-
-                    <div className="col-md-4">
-
-                        <div className="stat-card">
-
-                            <h3>
-
-                                Population
-
-                            </h3>
-
-                            <span>
-
-                                {population}
-
-                            </span>
-
-                        </div>
-
-                    </div>
 
                     <div className="col-md-4">
 
@@ -182,13 +148,7 @@ export default function InvestorTable({
 
                                                     <th>
 
-                                                        Kandy
-
-                                                    </th>
-
-                                                    <th>
-
-                                                        Village
+                                                        Section
 
                                                     </th>
 
@@ -216,7 +176,7 @@ export default function InvestorTable({
 
                                                                 <td
 
-                                                                    colSpan="5"
+                                                                    colSpan="4"
 
                                                                     className="text-center py-5"
 
@@ -277,16 +237,6 @@ export default function InvestorTable({
                                                                                 }
 
                                                                             </strong>
-
-                                                                        </td>
-
-                                                                        <td>
-
-                                                                            {
-
-                                                                                investor.kandy
-
-                                                                            }
 
                                                                         </td>
 

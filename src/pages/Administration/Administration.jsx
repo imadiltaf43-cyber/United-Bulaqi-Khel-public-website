@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 
+import { Link } from "react-router-dom";
+
 import MainLayout from "../../layouts/MainLayout";
 
 import EmployeeSection from "../../components/administration/EmployeeSection";
@@ -100,20 +102,21 @@ const operationalStaff = deptMap.Other || [];
 
                     <div className="hero-content">
 
-                    
+                        <div className="compact-hero-breadcrumb">
+                            <Link to="/">Home</Link>
+                            <span>/</span>
+                            <span>Administration</span>
+                        </div>
+
+                        <span className="compact-hero-tag">Our Leadership</span>
+
                         <h1>
 
                             Administration
 
                         </h1>
 
-                        <p>
-
-                            Meet the leadership and management team driving
-                            United Bulaqi Khel Enterprises toward sustainable
-                            growth and operational excellence.
-
-                        </p>
+                        <div className="compact-hero-line"></div>
 
                     </div>
 

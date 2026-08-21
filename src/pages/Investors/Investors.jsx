@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 
+import { Link } from "react-router-dom";
+
 import MainLayout from "../../layouts/MainLayout";
 
 import InvestorGrid from "../../components/investors/InvestorGrid";
@@ -80,11 +82,13 @@ export default function Investors() {
 
                     <div className="hero-content">
 
-                        <span>
+                        <div className="compact-hero-breadcrumb">
+                            <Link to="/">Home</Link>
+                            <span>/</span>
+                            <span>Investors</span>
+                        </div>
 
-                            UNITED BULAQI KHEL ENTERPRISES
-
-                        </span>
+                        <span className="compact-hero-tag">United Bulaqi Khel Enterprises</span>
 
                         <h1>
 
@@ -92,12 +96,7 @@ export default function Investors() {
 
                         </h1>
 
-                        <p>
-
-                            United Bulaqi Khel Enterprises proudly represents
-                            the shareholders of Barkali and Attariwal villages.
-
-                        </p>
+                        <div className="compact-hero-line"></div>
 
                     </div>
 

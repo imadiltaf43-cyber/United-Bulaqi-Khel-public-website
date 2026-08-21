@@ -3,8 +3,8 @@
 :root{--gold:#d4af37;--card:#161b22;--light:#f7f8fa}
 .investor-hero{position:relative;height:60vh;min-height:420px;background:url('../../assets/images/investors/investors-banner.jpg') center/cover no-repeat;display:flex;align-items:center}
 .investor-hero .overlay{position:absolute;inset:0;background:linear-gradient(rgba(8,12,18,.7),rgba(8,12,18,.9))}
-.investor-hero .container{position:relative;z-index:2}.breadcrumb{color:var(--gold)}
-.investor-hero h1{font-size:58px;color:#fff}.investor-hero h1 span{color:var(--gold)}.investor-hero p{color:#ddd;max-width:700px}
+.investor-hero .container{position:relative;z-index:2}
+.investor-hero h1{font-size:clamp(3rem, 6vw, 4.25rem);color:#fff}.investor-hero h1 span{color:var(--gold)}
 .investor-filter{margin-top:-55px;position:relative;z-index:5}
 .filter-wrapper{background:#fff;border-radius:18px;padding:25px;display:flex;gap:20px;flex-wrap:wrap;box-shadow:0 20px 50px rgba(0,0,0,.15)}
 .search-box{flex:1;display:flex;align-items:center;border:1px solid #ddd;border-radius:10px;overflow:hidden;min-width:280px}

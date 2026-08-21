@@ -17,7 +17,7 @@ export default function InvestorGrid({
 
             village: "Barkali",
 
-            population: 3500,
+            totalShares: 3500,
 
             image: barkaliImg,
 
@@ -27,7 +27,7 @@ export default function InvestorGrid({
 
             village: "Attariwal",
 
-            population: 3164,
+            totalShares: 3160,
 
             image: attariwalImg,
 
@@ -45,19 +45,19 @@ export default function InvestorGrid({
 
                     <h2>
 
-                        Select Your Village
+                        Our Investors
 
                     </h2>
 
                     <p>
 
-                        Choose your village to view the shareholder list.
+                        Select to view the shareholder list.
 
                     </p>
 
                 </div>
 
-                <div className="row g-4">
+                <div className="investor-village-grid">
 
                     {
 

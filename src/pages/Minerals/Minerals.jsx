@@ -43,11 +43,17 @@ export default function Minerals() {
 
         <div className="container mineralsHeroContent">
 
-          <div className="breadcrumb">
-            Home <span>›</span> Our Minerals
+          <div className="compact-hero-breadcrumb">
+            <span>Home</span>
+            <span>/</span>
+            <span>Our Minerals</span>
           </div>
 
+          <span className="compact-hero-tag">Natural Resources</span>
+
           <h1>OUR MINERALS</h1>
+
+          <div className="compact-hero-line"></div>
 
         </div>
 

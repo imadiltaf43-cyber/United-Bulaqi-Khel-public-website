@@ -12,13 +12,13 @@ export default function SustainabilityHero() {
 
       <div className="container sustainability-hero-content">
 
-        <span className="breadcrumb">
+        <div className="compact-hero-breadcrumb">
+          <span>Home</span>
+          <span>/</span>
+          <span>Sustainability</span>
+        </div>
 
-          Home /
-
-          <span> Sustainability</span>
-
-        </span>
+        <span className="compact-hero-tag">Responsible Growth</span>
 
         <h1>
 
@@ -30,13 +30,7 @@ export default function SustainabilityHero() {
 
         </h1>
 
-        <p>
-
-          At United Bulaqi Khel Enterprises, sustainability is at the heart of
-          everything we do. We strive to protect the environment, empower
-          communities, and ensure safe mining practices for future generations.
-
-        </p>
+        <div className="compact-hero-line"></div>
 
       </div>
     </section>
