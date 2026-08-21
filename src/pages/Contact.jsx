@@ -197,11 +197,13 @@ export default function Contact() {
                   <h4>Office Address</h4>
 
                   <p>
-                    United Bulaqi Khel Enterprises
+                    1.	Office of the United Bulaqi Khel Enterprises, 
+                    <br /> Azadi Mela, Akhurwal, Dara Adam Khel, Kohat,
+                    <br /> KP, Pakistan
                     <br />
-                    Peshawar, Khyber Pakhtunkhwa
-                    <br />
-                    Pakistan
+                    2.	United Bulaqi Khel Enterprises,
+                    <br /> Daneen, Chitral, KP, Pakistan
+
                   </p>
 
                 </div>
@@ -219,9 +221,12 @@ export default function Contact() {
                   <h4>Phone Number</h4>
 
                   <p>
-                    +92 300 1234567
-                    <br />
-                    +92 91 1234567
+                   +92 324 9393707
+                   <br />
+                  +92 342 9233570
+                  <br />
+                  +92 3319420820
+
                   </p>
 
                 </div>
@@ -240,11 +245,15 @@ export default function Contact() {
 
                   <p>
 
-                    info@unitedbulaqikhel.com
+                    md@ubke.ltd 
 
                     <br />
 
-                    hr@unitedbulaqikhel.com
+                    pm@ubke.ltd
+
+                    <br />
+                    it@ubke.ltd 
+
 
                   </p>
 
@@ -411,7 +420,7 @@ export default function Contact() {
 
           title="United Bulaqi Khel Enterprises"
 
-          src="https://www.google.com/maps?q=Peshawar,Pakistan&output=embed"
+          src="https://www.google.com/maps/embed?origin=mfe&pb=!1m2!2m1!1s35.88564577,71.87112149"
 
           loading="lazy"
 
