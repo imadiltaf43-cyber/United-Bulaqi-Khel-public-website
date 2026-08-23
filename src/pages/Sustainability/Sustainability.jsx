@@ -1,5 +1,3 @@
-import MainLayout from "../../layouts/MainLayout";
-
 import SustainabilityHero from "../../components/sustainability/SustainabilityHero";
 import CommitmentSection from "../../components/sustainability/CommitmentSection";
 import SustainabilityPillars from "../../components/sustainability/SustainabilityPillars";
@@ -11,7 +9,7 @@ import "./Sustainability.css";
 
 export default function Sustainability() {
   return (
-    <MainLayout>
+    <>
       <SustainabilityHero />
 
       <CommitmentSection />
@@ -23,6 +21,6 @@ export default function Sustainability() {
       <SafetySection />
 
       <SustainabilityCTA />
-    </MainLayout>
+    </>
   );
-}
+}

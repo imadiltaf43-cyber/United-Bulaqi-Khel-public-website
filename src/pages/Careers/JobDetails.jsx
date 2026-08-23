@@ -1,4 +1,4 @@
-import React, {
+import {
   useEffect,
   useState,
 } from "react";
@@ -28,7 +28,6 @@ import "./JobDetails.css";
 export default function JobDetails() {
 
   const { id } = useParams();
-  console.log("JobDetails Route ID:", id);
 
   const [job, setJob] = useState(null);
 
@@ -43,8 +42,6 @@ export default function JobDetails() {
 
 const loadJob = async () => {
   try {
-    console.log("Loading Job Details:", id);
-
     const response = await getJob(id);
 
     setJob(response.job);

@@ -9,8 +9,6 @@ import {
     FaLayerGroup,
 } from "react-icons/fa";
 
-import MainLayout from "../../layouts/MainLayout";
-
 import { getMineral } from "../../services/mineralService";
 
 import "./MineralDetails.css";
@@ -37,7 +35,7 @@ export default function MineralDetails() {
 
         } catch (err) {
 
-            console.log(err);
+            // silently fail — N-08
 
         } finally {
 
@@ -49,27 +47,23 @@ export default function MineralDetails() {
 
     if (loading) {
         return (
-            <MainLayout>
-                <div className="loading">
-                    Loading...
-                </div>
-            </MainLayout>
+            <div className="loading">
+                Loading...
+            </div>
         );
     }
 
     if (!mineral) {
         return (
-            <MainLayout>
-                <div className="loading">
-                    Mineral Not Found
-                </div>
-            </MainLayout>
+            <div className="loading">
+                Mineral Not Found
+            </div>
         );
     }
 
     return (
 
-        <MainLayout>
+        <>
 
             {/* Hero */}
 
@@ -248,7 +242,7 @@ export default function MineralDetails() {
 
             )}
 
-        </MainLayout>
+        </>
 
     );
 

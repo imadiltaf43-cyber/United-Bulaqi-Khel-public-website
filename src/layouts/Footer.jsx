@@ -32,7 +32,7 @@ export default function Footer() {
       setSettings(data.settings);
 
     } catch (err) {
-      console.log(err);
+      // silently fail if settings are unavailable
     }
   };
 
@@ -67,7 +67,7 @@ export default function Footer() {
                 <a
                   href={settings.footer.facebook}
                   target="_blank"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                 >
                   <FaFacebookF />
                 </a>
@@ -79,7 +79,7 @@ export default function Footer() {
                 <a
                   href={settings.footer.linkedin}
                   target="_blank"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                 >
                   <FaLinkedinIn />
                 </a>
@@ -91,7 +91,7 @@ export default function Footer() {
                 <a
                   href={settings.footer.youtube}
                   target="_blank"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                 >
                   <FaYoutube />
                 </a>
@@ -126,7 +126,7 @@ export default function Footer() {
 
               <li><Link to="/sustainability">Sustainability</Link></li>
 
-              <li><Link to="/employees">Employees</Link></li>
+              <li><Link to="/administration">Our Team</Link></li>
 
               <li><Link to="/investors">Investors</Link></li>
 

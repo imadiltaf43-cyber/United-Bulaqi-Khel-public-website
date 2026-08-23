@@ -13,6 +13,7 @@ export default function EmployeeCard({ employee }) {
         <img
           src={image}
           alt={employee.fullName}
+          loading="lazy"
         />
 
       </div>

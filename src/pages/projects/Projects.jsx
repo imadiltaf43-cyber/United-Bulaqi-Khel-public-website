@@ -1,7 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
 
-import MainLayout from "../../layouts/MainLayout";
-
 import ProjectHero from "../../components/projects/ProjectHero";
 import ProjectFilter from "../../components/projects/ProjectFilter";
 import ProjectCard from "../../components/projects/ProjectCard";
@@ -29,7 +27,7 @@ export default function Projects() {
 
       setProjects(data.projects || []);
     } catch (err) {
-      console.log(err);
+      // silently fail — N-08
     } finally {
       setLoading(false);
     }
@@ -69,7 +67,7 @@ export default function Projects() {
   }, [projects, selectedCategory, sort]);
 
   return (
-    <MainLayout>
+    <>
       <ProjectHero />
 
       <ProjectFilter
@@ -125,6 +123,6 @@ export default function Projects() {
           </a>
         </div>
       </section>
-    </MainLayout>
+    </>
   );
 }

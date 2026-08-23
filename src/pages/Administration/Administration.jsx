@@ -1,7 +1,5 @@
 import { useEffect, useState } from "react";
 
-import MainLayout from "../../layouts/MainLayout";
-
 import EmployeeSection from "../../components/administration/EmployeeSection";
 
 import { getEmployees } from "../../services/employeeService";

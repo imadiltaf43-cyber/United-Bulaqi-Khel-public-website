@@ -14,8 +14,6 @@ import {
   FaUserTie,
 } from "react-icons/fa";
 
-import MainLayout from "../../layouts/MainLayout";
-
 import { getInvestor } from "../../services/investorService";
 
 import { getImageUrl } from "../../utils/getImageUrl";
@@ -46,7 +44,7 @@ export default function InvestorDetails() {
 
     } catch (err) {
 
-      console.log(err);
+      // silently fail — N-08
 
     } finally {
 
@@ -60,15 +58,11 @@ export default function InvestorDetails() {
 
     return (
 
-      <MainLayout>
+      <div className="loading">
 
-        <div className="loading">
+        Loading Investor...
 
-          Loading Investor...
-
-        </div>
-
-      </MainLayout>
+      </div>
 
     );
 
@@ -76,21 +70,17 @@ export default function InvestorDetails() {
 
     return (
 
-      <MainLayout>
+      <div className="loading">
 
-        <div className="loading">
+        Investor Not Found
 
-          Investor Not Found
-
-        </div>
-
-      </MainLayout>
+      </div>
 
     );
 
   return (
 
-    <MainLayout>
+    <>
 
       {/* Hero */}
 
@@ -349,7 +339,7 @@ export default function InvestorDetails() {
 
       </section>
 
-    </MainLayout>
+    </>
 
   );
 

@@ -1,7 +1,5 @@
 import { useState, useEffect } from "react";
 
-import MainLayout from "../../layouts/MainLayout";
-
 import InvestorGrid from "../../components/investors/InvestorGrid";
 import InvestorTable from "../../components/investors/InvestorTable";
 
@@ -47,7 +45,7 @@ export default function Investors() {
 
         catch (err) {
 
-            console.error(err);
+            // silently fail — N-08
 
         }
 
@@ -63,7 +61,7 @@ export default function Investors() {
 
     return (
 
-        <MainLayout>
+        <>
 
             {/* HERO */}
 
@@ -147,7 +145,7 @@ export default function Investors() {
 
             }
 
-        </MainLayout>
+        </>
 
     );
 
