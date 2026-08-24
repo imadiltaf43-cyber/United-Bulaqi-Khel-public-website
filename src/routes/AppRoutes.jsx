@@ -18,6 +18,8 @@ import ProjectDetails from "../pages/ProjectDetails/ProjectDetails";
 
 import Sustainability from "../pages/Sustainability/Sustainability";
 
+import EventDetails from "../pages/EventDetails/EventDetails";
+
 import Investors from "../pages/Investors/Investors";
 import InvestorDetails from "../pages/InvestorDetails/InvestorDetails";
 
@@ -121,6 +123,15 @@ export default function AppRoutes() {
           element={
             <MainLayout>
               <Sustainability />
+            </MainLayout>
+          }
+        />
+
+        <Route
+          path="/sustainability/events/:id"
+          element={
+            <MainLayout>
+              <EventDetails />
             </MainLayout>
           }
         />
