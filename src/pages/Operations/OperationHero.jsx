@@ -17,17 +17,17 @@ export default function OperationHero() {
 
             <div className="container operation-hero-content">
 
+                <div className="compact-hero-breadcrumb">
+                    <Link to="/">Home</Link>
+                    <span>/</span>
+                    <span>Operations</span>
+                </div>
+
+                <span className="compact-hero-tag">Mining In Action</span>
+
                 <h1>Operations</h1>
 
-                <div className="breadcrumb">
-
-                    <Link to="/">Home</Link>
-
-                    <span>/</span>
-
-                    <span>Operations</span>
-
-                </div>
+                <div className="compact-hero-line"></div>
 
             </div>
 

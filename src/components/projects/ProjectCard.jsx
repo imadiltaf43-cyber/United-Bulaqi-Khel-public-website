@@ -15,6 +15,20 @@ export default function ProjectCard({ project }) {
       ? project.gallery[0].url
       : "/project.png";
 
+  const rawStatus = project.status || "";
+  const normalized = rawStatus.toLowerCase().trim();
+  let displayStatus = rawStatus;
+  if (
+    normalized === "completed" ||
+    normalized === "project completed" ||
+    normalized.includes("complete")
+  ) {
+    displayStatus = "Stopped";
+  } else if (normalized === "active" || normalized === "ongoing") {
+    displayStatus = "Ongoing";
+  }
+  const statusClass = displayStatus.toLowerCase();
+
   return (
     <div className="project-card">
 
@@ -79,10 +93,8 @@ export default function ProjectCard({ project }) {
 
             <span>Status</span>
 
-            <strong
-              className={`status ${project.status.toLowerCase()}`}
-            >
-              {project.status}
+            <strong className={`status ${statusClass}`}>
+              {displayStatus}
             </strong>
 
           </div>

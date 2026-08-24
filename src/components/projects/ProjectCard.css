@@ -112,11 +112,13 @@
   font-size: 14px;
 }
 
-.status.active {
+.status.active,
+.status.ongoing {
   color: #33cc66;
 }
 
-.status.completed {
+.status.completed,
+.status.stopped {
   color: #4db5ff;
 }
 

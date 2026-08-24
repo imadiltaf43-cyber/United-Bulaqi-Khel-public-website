@@ -3,7 +3,7 @@ import "./VillageCard.css";
 
 export default function VillageCard({
   village,
-  population,
+  totalShares,
   image,
   onSelect,
 }) {
@@ -18,7 +18,7 @@ export default function VillageCard({
 
         <div className="village-population">
           <FaUsers />
-          <span>Population : {population}</span>
+          <span>Total shares: {totalShares}</span>
         </div>
 
         <button

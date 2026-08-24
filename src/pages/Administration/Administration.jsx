@@ -1,6 +1,11 @@
 import { useEffect, useState } from "react";
 
+import { Link } from "react-router-dom";
+
+import MainLayout from "../../layouts/MainLayout";
+
 import EmployeeSection from "../../components/administration/EmployeeSection";
+import OrganizationHierarchy from "../../components/administration/OrganizationHierarchy";
 
 import { getEmployees } from "../../services/employeeService";
 
@@ -49,55 +54,32 @@ export default function Administration() {
     };
 
     //-------------------------------------
-    // Groups
+    // Groups (Head Office focused)
     //-------------------------------------
 
-const directors = employees.filter((emp) => {
-    const d = emp.designation.toLowerCase();
+const headEmployees = employees.filter((emp) => (emp.office || "Head Office") === "Head Office");
 
-    return (
-        d.includes("director") ||
-        d.includes("chairman")
-    );
+const directors = headEmployees.filter((emp) => ((emp.designation || "") + "").toLowerCase().includes("director") || ((emp.designation || "") + "").toLowerCase().includes("chairman"));
+
+const md = headEmployees.find((emp) => ((emp.designation || "") + "").toLowerCase().includes("managing director") || ((emp.designation || "") + "").toLowerCase().includes("md"));
+
+const gm = headEmployees.find((emp) => ((emp.designation || "") + "").toLowerCase().includes("general manager") || ((emp.designation || "") + "").toLowerCase().includes("gm"));
+
+// Group remaining head office employees by `department` field
+const deptMap = {};
+headEmployees.forEach((emp) => {
+    // skip directors/md/gm from department lists
+    if (directors.some((d) => d._id === emp._id)) return;
+    if (md && emp._id === md._id) return;
+    if (gm && emp._id === gm._id) return;
+
+    const dept = emp.department || "Other";
+    if (!deptMap[dept]) deptMap[dept] = [];
+    deptMap[dept].push(emp);
 });
 
-const ceo = employees.filter((emp) => {
-    const d = emp.designation.toLowerCase();
-
-    return (
-        d.includes("chief executive") ||
-        d.includes("ceo")
-    );
-});
-
-const seniorManagement = employees.filter((emp) => {
-    const d = emp.designation.toLowerCase();
-
-    return (
-        d.includes("manager") &&
-        !d.includes("director") &&
-        !d.includes("chief")
-    );
-});
-
-const departmentHeads = employees.filter((emp) => {
-    const d = emp.designation.toLowerCase();
-
-    return d.includes("head");
-});
-
-const operationalStaff = employees.filter((emp) => {
-
-    return (
-
-        !directors.some((e) => e._id === emp._id) &&
-        !ceo.some((e) => e._id === emp._id) &&
-        !seniorManagement.some((e) => e._id === emp._id) &&
-        !departmentHeads.some((e) => e._id === emp._id)
-
-    );
-
-});
+// Any head employees not captured (should be none) go to Other
+const operationalStaff = deptMap.Other || [];
 
     //-------------------------------------
 
@@ -120,20 +102,21 @@ const operationalStaff = employees.filter((emp) => {
 
                     <div className="hero-content">
 
-                    
+                        <div className="compact-hero-breadcrumb">
+                            <Link to="/">Home</Link>
+                            <span>/</span>
+                            <span>Administration</span>
+                        </div>
+
+                        <span className="compact-hero-tag">Our Leadership</span>
+
                         <h1>
 
                             Administration
 
                         </h1>
 
-                        <p>
-
-                            Meet the leadership and management team driving
-                            United Bulaqi Khel Enterprises toward sustainable
-                            growth and operational excellence.
-
-                        </p>
+                        <div className="compact-hero-line"></div>
 
                     </div>
 
@@ -163,44 +146,34 @@ const operationalStaff = employees.filter((emp) => {
 
                     <>
 
-                        <EmployeeSection
-
-                            title="Board of Directors"
-
-                            employees={directors}
-
+                        <OrganizationHierarchy
+                            title="Head Office Hierarchy"
+                            employees={employees.filter((e) => (e.office || "Head Office") === "Head Office")}
+                            office={"Head Office"}
                         />
 
-                        <EmployeeSection
+                        <EmployeeSection title="Board of Directors" employees={directors} />
 
-                            title="Chief Executive Officer"
+                        {/* Render each department present in head office */}
+                        {Object.keys(deptMap).map((dept) => (
+                            <EmployeeSection key={dept} title={dept} employees={deptMap[dept]} />
+                        ))}
 
-                            employees={ceo}
+                        {/* Fallback: if no department groups found, show operational staff */}
+                        {Object.keys(deptMap).length === 0 && (
+                            <EmployeeSection title="Operational Staff" employees={operationalStaff} />
+                        )}
 
+                        <OrganizationHierarchy
+                            title="Chitral Office Hierarchy"
+                            employees={employees.filter((e) => e.office === "Chitral")}
+                            office={"Chitral"}
                         />
 
-                        <EmployeeSection
-
-                            title="Senior Management"
-
-                            employees={seniorManagement}
-
-                        />
-
-                        <EmployeeSection
-
-                            title="Department Heads"
-
-                            employees={departmentHeads}
-
-                        />
-
-                        <EmployeeSection
-
-                            title="Operational Staff"
-
-                            employees={operationalStaff}
-
+                        <OrganizationHierarchy
+                            title="Darra Office Hierarchy"
+                            employees={employees.filter((e) => e.office === "Darra")}
+                            office={"Darra"}
                         />
 
                     </>

@@ -1,0 +1,96 @@
+.organization-hierarchy {
+  padding: 40px 0;
+}
+
+.organization-hierarchy h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.org-tree {
+  display: flex;
+  justify-content: center;
+}
+
+.org-root,
+.org-children {
+  list-style: none;
+  padding-left: 0;
+}
+
+.org-node {
+  margin: 8px 0;
+}
+
+.org-card {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  padding: 12px 16px;
+  border-radius: 8px;
+  text-align: center;
+  min-width: 200px;
+}
+
+.org-children {
+  margin-top: 8px;
+  padding-left: 20px;
+}
+
+.org-name {
+  font-weight: 700;
+}
+
+.org-role {
+  font-size: 13px;
+  color: #6b7280;
+}
+
+.directors-row{
+  display:flex;
+  gap:20px;
+  justify-content:center;
+  margin-bottom:24px;
+}
+
+.director-card{
+  background:#0f172a;
+  color:#fff;
+  padding:12px 20px;
+  border-radius:8px;
+  min-width:220px;
+  text-align:center;
+}
+
+.md-row{
+  display:flex;
+  gap:20px;
+  align-items:flex-start;
+  justify-content:center;
+  margin-bottom:20px;
+}
+
+.md-card{
+  background:#1e40af;
+  color:#fff;
+  padding:18px 22px;
+  border-radius:8px;
+  min-width:320px;
+  text-align:center;
+}
+
+.md-message{
+  max-width:420px;
+  background:#111827;
+  color:#fff;
+  padding:18px;
+  border-radius:8px;
+}
+
+.gm-row{display:flex;justify-content:center;margin-bottom:18px}
+.gm-card{background:#374151;color:#fff;padding:14px 20px;border-radius:8px;min-width:280px;text-align:center}
+
+.departments-grid{display:flex;flex-wrap:wrap;gap:18px;justify-content:center;margin-top:18px}
+.dept-box{background:#fff;border:1px solid #e5e7eb;padding:12px;border-radius:6px;min-width:200px}
+.dept-title{font-weight:700;color:#0f172a;margin-bottom:6px}
+.dept-box ul{margin:0;padding-left:18px}
+.dept-box li{margin-bottom:6px}
