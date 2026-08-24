@@ -30,9 +30,9 @@
 
 .about-hero h1 {
   color: #fff;
-  font-size: 68px;
+  font-size: clamp(3rem, 6vw, 4.25rem);
   font-weight: 800;
-  margin-bottom: 20px;
+  margin-bottom: 0;
 }
 
 .breadcrumb {

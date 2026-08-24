@@ -36,14 +36,14 @@ export default function ProjectHero() {
     {
       icon: <FaIndustry />,
       value: settings?.projectStats?.projectsCompleted || 0,
-      label: "Projects Completed",
+      label: "Projects Stopped",
       suffix: "+",
       isString: false,
     },
     {
       icon: <FaHardHat />,
       value: settings?.projectStats?.activeProjects || 0,
-      label: "Active Projects",
+      label: "Ongoing Projects",
       suffix: "+",
       isString: false,
     },

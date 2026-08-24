@@ -51,45 +51,15 @@
 
 }
 
-.hero-content span{
-
-    display:block;
-
-    color:#c89b2b;
-
-    font-size:14px;
-
-    font-weight:700;
-
-    letter-spacing:3px;
-
-    text-transform:uppercase;
-
-    margin-bottom:20px;
-
-}
-
 .hero-content h1{
 
-    font-size:64px;
+    font-size:clamp(3rem, 6vw, 4.25rem);
 
     font-weight:800;
 
     line-height:1.1;
 
-    margin-bottom:20px;
-
-}
-
-.hero-content p{
-
-    font-size:18px;
-
-    line-height:1.8;
-
-    color:#f1f1f1;
-
-    max-width:700px;
+    margin-bottom:0;
 
 }
 
@@ -190,14 +160,6 @@
     .hero-content h1{
 
         font-size:36px;
-
-    }
-
-    .hero-content span{
-
-        letter-spacing:2px;
-
-        font-size:13px;
 
     }
 

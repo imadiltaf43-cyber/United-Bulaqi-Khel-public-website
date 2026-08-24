@@ -25,6 +25,41 @@ body{
     overflow-x:hidden;
 }
 
+.compact-hero-breadcrumb{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    margin-bottom:22px;
+    color:rgba(255,255,255,.72);
+    font-size:.9rem;
+}
+
+.compact-hero-breadcrumb a{color:#D4AF37;font-weight:600}
+.compact-hero-breadcrumb span{color:rgba(255,255,255,.55)}
+
+.compact-hero-tag{
+    display:inline-flex;
+    padding:9px 18px;
+    margin-bottom:22px;
+    border:1px solid rgba(212,175,55,.28);
+    border-radius:100px;
+    background:rgba(212,175,55,.14);
+    color:#D4AF37;
+    font-size:.78rem;
+    font-weight:600;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    backdrop-filter:blur(8px);
+}
+
+.compact-hero-line{
+    width:90px;
+    height:4px;
+    margin-top:24px;
+    border-radius:20px;
+    background:linear-gradient(90deg,#D4AF37,#f3d36d);
+}
+
 a{
 
     text-decoration:none;

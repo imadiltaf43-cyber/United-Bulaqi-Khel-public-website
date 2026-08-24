@@ -47,7 +47,11 @@ export default function Minerals() {
             <Link to="/">Home</Link> <span>›</span> Our Minerals
           </div>
 
+          <span className="compact-hero-tag">Natural Resources</span>
+
           <h1>OUR MINERALS</h1>
+
+          <div className="compact-hero-line"></div>
 
         </div>
 
