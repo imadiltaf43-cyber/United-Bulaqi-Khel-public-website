@@ -18,7 +18,7 @@ import ProjectDetails from "../pages/ProjectDetails/ProjectDetails";
 
 import Sustainability from "../pages/Sustainability/Sustainability";
 
-
+import EventDetails from "../pages/EventDetails/EventDetails";
 
 import Investors from "../pages/Investors/Investors";
 import InvestorDetails from "../pages/InvestorDetails/InvestorDetails";
@@ -29,16 +29,16 @@ import ApplyJob from "../pages/Careers/ApplyJob";
 
 import Contact from "../pages/Contact";
 
+// M-02: Import a 404 Not Found page
+import NotFound from "../pages/NotFound";
+
 export default function AppRoutes() {
   return (
     <BrowserRouter>
-
-
-    <ScrollToTop />
+      <ScrollToTop />
       <Routes>
 
         {/* ================= Home ================= */}
-
         <Route
           path="/"
           element={
@@ -49,7 +49,6 @@ export default function AppRoutes() {
         />
 
         {/* ================= About ================= */}
-
         <Route
           path="/about"
           element={
@@ -60,7 +59,7 @@ export default function AppRoutes() {
         />
 
         {/* ================= Administration ================= */}
-
+        {/* C-03/M-07: Consistent layout wrapping — AppRoutes owns the MainLayout */}
         <Route
           path="/administration"
           element={
@@ -71,27 +70,25 @@ export default function AppRoutes() {
         />
 
         {/* ================= Minerals ================= */}
-
         <Route
           path="/minerals"
           element={
-            
+            <MainLayout>
               <Minerals />
-           
+            </MainLayout>
           }
         />
 
         <Route
           path="/minerals/:id"
           element={
-            
+            <MainLayout>
               <MineralDetails />
-            
+            </MainLayout>
           }
         />
 
         {/* ================= Operations ================= */}
-
         <Route
           path="/operations"
           element={
@@ -102,7 +99,6 @@ export default function AppRoutes() {
         />
 
         {/* ================= Projects ================= */}
-
         <Route
           path="/projects"
           element={
@@ -122,40 +118,44 @@ export default function AppRoutes() {
         />
 
         {/* ================= Sustainability ================= */}
-
         <Route
           path="/sustainability"
           element={
-            
+            <MainLayout>
               <Sustainability />
-            
+            </MainLayout>
           }
         />
 
-        
+        <Route
+          path="/sustainability/events/:id"
+          element={
+            <MainLayout>
+              <EventDetails />
+            </MainLayout>
+          }
+        />
 
         {/* ================= Investors ================= */}
-
         <Route
           path="/investors"
           element={
-            
+            <MainLayout>
               <Investors />
-            
+            </MainLayout>
           }
         />
 
         <Route
           path="/investors/:id"
           element={
-            
+            <MainLayout>
               <InvestorDetails />
-            
+            </MainLayout>
           }
         />
 
         {/* ================= Careers ================= */}
-
         <Route
           path="/careers"
           element={
@@ -184,12 +184,22 @@ export default function AppRoutes() {
         />
 
         {/* ================= Contact ================= */}
-
         <Route
           path="/contact"
           element={
             <MainLayout>
               <Contact />
+            </MainLayout>
+          }
+        />
+
+        {/* ================= 404 — MUST be last ================= */}
+        {/* M-02: Catch-all 404 route */}
+        <Route
+          path="*"
+          element={
+            <MainLayout>
+              <NotFound />
             </MainLayout>
           }
         />

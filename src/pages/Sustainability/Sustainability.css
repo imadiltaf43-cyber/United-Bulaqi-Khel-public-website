@@ -630,3 +630,278 @@ html {
 .esg-section {
   scroll-margin-top: 100px;
 }
+
+/* =====================================================
+   SUSTAINABILITY EVENTS SECTION
+===================================================== */
+
+.events-section{
+    padding:120px 0;
+    background:#fff;
+}
+
+/* ---- Filter Tabs ---- */
+
+.events-filter-tabs{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:12px;
+    margin-bottom:60px;
+}
+
+.events-filter-tab{
+    padding:10px 24px;
+    border:2px solid rgba(201,162,39,.25);
+    border-radius:50px;
+    background:transparent;
+    color:#666;
+    font-weight:600;
+    font-size:.9rem;
+    cursor:pointer;
+    transition:.35s;
+    font-family:inherit;
+}
+
+.events-filter-tab:hover{
+    border-color:#C9A227;
+    color:#C9A227;
+}
+
+.events-filter-tab.active{
+    background:#C9A227;
+    border-color:#C9A227;
+    color:#fff;
+}
+
+/* ---- Events Grid ---- */
+
+.events-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+}
+
+/* ---- Event Card ---- */
+
+.event-card{
+    background:#fff;
+    border-radius:22px;
+    overflow:hidden;
+    border:1px solid rgba(0,0,0,.05);
+    box-shadow:0 15px 45px rgba(0,0,0,.06);
+    transition:.4s;
+}
+
+.event-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 30px 60px rgba(0,0,0,.12);
+}
+
+/* ---- Card Image ---- */
+
+.event-card-image{
+    position:relative;
+    height:220px;
+    overflow:hidden;
+}
+
+.event-card-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:.5s;
+}
+
+.event-card:hover .event-card-image img{
+    transform:scale(1.08);
+}
+
+/* ---- Status Pill Overlay ---- */
+
+.event-card-status{
+    position:absolute;
+    top:15px;
+    right:15px;
+    padding:5px 14px;
+    border-radius:50px;
+    font-size:.78rem;
+    font-weight:600;
+    backdrop-filter:blur(10px);
+}
+
+.events-status-completed{
+    background:rgba(34,197,94,.18);
+    color:#15803d;
+    border:1px solid rgba(34,197,94,.25);
+}
+
+.events-status-ongoing{
+    background:rgba(245,158,11,.18);
+    color:#d97706;
+    border:1px solid rgba(245,158,11,.25);
+}
+
+.events-status-planned{
+    background:rgba(59,130,246,.18);
+    color:#1d4ed8;
+    border:1px solid rgba(59,130,246,.25);
+}
+
+/* ---- Card Body ---- */
+
+.event-card-body{
+    padding:28px;
+}
+
+/* ---- Category Badge ---- */
+
+.event-card-badge{
+    display:inline-block;
+    padding:5px 14px;
+    border-radius:50px;
+    font-size:.78rem;
+    font-weight:600;
+    margin-bottom:15px;
+}
+
+.events-badge-plantation{
+    background:rgba(34,197,94,.12);
+    color:#15803d;
+}
+
+.events-badge-road{
+    background:rgba(245,158,11,.12);
+    color:#92400e;
+}
+
+.events-badge-infra{
+    background:rgba(139,92,246,.12);
+    color:#6d28d9;
+}
+
+.events-badge-water{
+    background:rgba(59,130,246,.12);
+    color:#1d4ed8;
+}
+
+.events-badge-seminar{
+    background:rgba(236,72,153,.12);
+    color:#be185d;
+}
+
+.events-badge-other{
+    background:rgba(107,114,128,.12);
+    color:#374151;
+}
+
+/* ---- Card Title ---- */
+
+.event-card-body h3{
+    font-size:1.2rem;
+    font-weight:700;
+    color:#111;
+    margin-bottom:14px;
+    line-height:1.4;
+}
+
+/* ---- Meta Row ---- */
+
+.event-card-meta{
+    display:flex;
+    flex-wrap:wrap;
+    gap:18px;
+    margin-bottom:14px;
+}
+
+.event-card-meta span{
+    display:flex;
+    align-items:center;
+    gap:6px;
+    color:#888;
+    font-size:.85rem;
+}
+
+.event-card-meta svg{
+    color:#C9A227;
+    font-size:.8rem;
+}
+
+/* ---- Excerpt ---- */
+
+.event-card-excerpt{
+    color:#666;
+    font-size:.95rem;
+    line-height:1.7;
+    margin-bottom:20px;
+}
+
+/* ---- Details Link ---- */
+
+.event-card-link{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    color:#C9A227;
+    font-weight:600;
+    font-size:.92rem;
+    transition:.3s;
+}
+
+.event-card-link:hover{
+    color:#b18d15;
+    transform:translateX(5px);
+}
+
+/* ---- Loading / Empty ---- */
+
+.events-loading,
+.events-empty{
+    text-align:center;
+    padding:60px 0;
+    color:#888;
+    font-size:1.05rem;
+}
+
+/* ---- Events Responsive ---- */
+
+@media(max-width:1200px){
+
+    .events-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+@media(max-width:768px){
+
+    .events-grid{
+        grid-template-columns:1fr;
+    }
+
+    .events-section{
+        padding:80px 0;
+    }
+
+    .events-filter-tabs{
+        margin-bottom:40px;
+    }
+
+}
+
+@media(max-width:576px){
+
+    .event-card-image{
+        height:180px;
+    }
+
+    .event-card-body{
+        padding:22px;
+    }
+
+    .events-filter-tab{
+        padding:8px 18px;
+        font-size:.82rem;
+    }
+
+}

@@ -1,4 +1,4 @@
-import React, {
+import {
   useEffect,
   useState,
 } from "react";
@@ -22,8 +22,6 @@ import "./ApplyJob.css";
 export default function ApplyJob() {
 
   const { id } = useParams();
-
-  console.log("Route ID:", id);
 
   const navigate = useNavigate();
 
@@ -62,8 +60,6 @@ export default function ApplyJob() {
 
 const loadJob = async (jobId) => {
   try {
-    console.log("Loading job:", jobId);
-
     const response = await getJob(id);
 
     setJob(response.job);

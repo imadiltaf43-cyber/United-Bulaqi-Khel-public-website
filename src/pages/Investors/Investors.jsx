@@ -49,7 +49,7 @@ export default function Investors() {
 
         catch (err) {
 
-            console.error(err);
+            // silently fail — N-08
 
         }
 
@@ -65,7 +65,7 @@ export default function Investors() {
 
     return (
 
-        <MainLayout>
+        <>
 
             {/* HERO */}
 
@@ -146,7 +146,7 @@ export default function Investors() {
 
             }
 
-        </MainLayout>
+        </>
 
     );
 

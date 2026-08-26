@@ -1,8 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-import MainLayout from "../../layouts/MainLayout";
-
 import { getMinerals } from "../../services/mineralService";
 
 import heroBanner from "../../assets/images/minerals-banner.jpg";
@@ -20,16 +18,17 @@ export default function Minerals() {
   const loadMinerals = async () => {
     try {
       const data = await getMinerals();
-      setMinerals(data);
+      // C-02: Defensive check — API may return an array OR an object with a minerals key
+      setMinerals(Array.isArray(data) ? data : data.minerals || []);
     } catch (err) {
-      console.error(err);
+      // N-08: removed console.error in production; silently fail
     } finally {
       setLoading(false);
     }
   };
 
   return (
-    <MainLayout>
+    <>
 
       {/* Hero Section */}
 
@@ -44,7 +43,7 @@ export default function Minerals() {
         <div className="container mineralsHeroContent">
 
           <div className="compact-hero-breadcrumb">
-            <span>Home</span>
+            <Link to="/">Home</Link>
             <span>/</span>
             <span>Our Minerals</span>
           </div>
@@ -89,7 +88,6 @@ export default function Minerals() {
                         alt={mineral.name}
                         loading="lazy"
                     />
-                    
 
                   </div>
 
@@ -105,7 +103,7 @@ export default function Minerals() {
                       to={`/minerals/${mineral._id}`}
                       className="detailsBtn"
                     >
-                      View Details 
+                      View Details
                     </Link>
 
                   </div>
@@ -122,6 +120,6 @@ export default function Minerals() {
 
       </section>
 
-    </MainLayout>
+    </>
   );
 }

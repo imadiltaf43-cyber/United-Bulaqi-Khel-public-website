@@ -1,0 +1,289 @@
+/* =====================================================
+   EVENT DETAILS PAGE
+   Follows the existing Sustainability design system
+===================================================== */
+
+/* ---- Hero ---- */
+
+.event-details-hero{
+    position:relative;
+    height:65vh;
+    min-height:500px;
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    display:flex;
+    align-items:center;
+    overflow:hidden;
+}
+
+.event-details-hero-overlay{
+    position:absolute;
+    inset:0;
+    background:linear-gradient(
+        90deg,
+        rgba(0,0,0,.80),
+        rgba(0,0,0,.55),
+        rgba(0,0,0,.40)
+    );
+}
+
+.event-details-hero-content{
+    position:relative;
+    z-index:2;
+    color:#fff;
+    max-width:760px;
+}
+
+.event-details-hero h1{
+    font-size:clamp(2.5rem, 5vw, 3.5rem);
+    line-height:1.15;
+    font-weight:800;
+    margin-bottom:0;
+}
+
+/* ---- Content Section ---- */
+
+.event-details-content{
+    padding:80px 0 120px;
+    background:#fff;
+}
+
+/* ---- Back Link ---- */
+
+.event-details-back{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    color:#C9A227;
+    font-weight:600;
+    font-size:.95rem;
+    margin-bottom:40px;
+    transition:.3s;
+}
+
+.event-details-back:hover{
+    color:#b18d15;
+    transform:translateX(-5px);
+}
+
+/* ---- Info Row ---- */
+
+.event-details-info-row{
+    margin-bottom:60px;
+}
+
+.event-details-info-card{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:25px;
+    background:#fafafa;
+    border-radius:22px;
+    padding:35px;
+    border:1px solid rgba(0,0,0,.05);
+    box-shadow:0 15px 45px rgba(0,0,0,.06);
+}
+
+.event-info-item{
+    display:flex;
+    align-items:flex-start;
+    gap:15px;
+}
+
+.event-info-item svg{
+    color:#C9A227;
+    font-size:1.3rem;
+    margin-top:4px;
+    flex-shrink:0;
+}
+
+.event-info-item small{
+    display:block;
+    color:#999;
+    font-size:.82rem;
+    margin-bottom:4px;
+    text-transform:uppercase;
+    letter-spacing:1px;
+}
+
+.event-info-item strong{
+    color:#222;
+    font-size:1rem;
+}
+
+/* ---- Category Badges (detail page) ---- */
+
+.event-info-badge{
+    display:inline-block;
+    padding:5px 14px;
+    border-radius:50px;
+    font-size:.85rem;
+    font-weight:600;
+}
+
+.ed-badge-plantation{
+    background:rgba(34,197,94,.12);
+    color:#15803d;
+}
+
+.ed-badge-road{
+    background:rgba(245,158,11,.12);
+    color:#92400e;
+}
+
+.ed-badge-infra{
+    background:rgba(139,92,246,.12);
+    color:#6d28d9;
+}
+
+.ed-badge-water{
+    background:rgba(59,130,246,.12);
+    color:#1d4ed8;
+}
+
+.ed-badge-seminar{
+    background:rgba(236,72,153,.12);
+    color:#be185d;
+}
+
+.ed-badge-other{
+    background:rgba(107,114,128,.12);
+    color:#374151;
+}
+
+/* ---- Status (detail page) ---- */
+
+.event-info-status{
+    display:inline-block;
+    padding:5px 14px;
+    border-radius:50px;
+    font-size:.85rem;
+    font-weight:600;
+}
+
+.ed-status-completed{
+    background:rgba(34,197,94,.12);
+    color:#15803d;
+}
+
+.ed-status-ongoing{
+    background:rgba(245,158,11,.12);
+    color:#d97706;
+}
+
+.ed-status-planned{
+    background:rgba(59,130,246,.12);
+    color:#1d4ed8;
+}
+
+/* ---- Description ---- */
+
+.event-details-description{
+    margin-bottom:70px;
+}
+
+.event-details-description h2{
+    font-size:2.2rem;
+    font-weight:700;
+    color:#111;
+    margin-bottom:22px;
+}
+
+.event-details-description p{
+    color:#555;
+    line-height:1.9;
+    font-size:1.05rem;
+    white-space:pre-wrap;
+}
+
+/* ---- Gallery ---- */
+
+.event-details-gallery h2{
+    font-size:2.2rem;
+    font-weight:700;
+    color:#111;
+    margin-bottom:30px;
+}
+
+.event-details-gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
+    gap:20px;
+}
+
+.event-gallery-item img{
+    width:100%;
+    height:260px;
+    object-fit:cover;
+    border-radius:20px;
+    box-shadow:0 15px 40px rgba(0,0,0,.10);
+    transition:.4s;
+}
+
+.event-gallery-item img:hover{
+    transform:scale(1.03);
+    box-shadow:0 20px 50px rgba(0,0,0,.16);
+}
+
+/* ---- Loading / Empty ---- */
+
+.event-details-loading,
+.event-details-empty{
+    padding:120px 0;
+    text-align:center;
+    color:#666;
+    font-size:1.1rem;
+}
+
+.event-details-empty h2{
+    color:#111;
+    margin-bottom:20px;
+}
+
+/* ---- Responsive ---- */
+
+@media(max-width:992px){
+
+    .event-details-info-card{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+@media(max-width:768px){
+
+    .event-details-hero{
+        min-height:400px;
+    }
+
+    .event-details-hero h1{
+        font-size:2.2rem;
+    }
+
+    .event-details-info-card{
+        grid-template-columns:1fr;
+        padding:25px;
+    }
+
+    .event-details-description h2,
+    .event-details-gallery h2{
+        font-size:1.8rem;
+    }
+
+}
+
+@media(max-width:576px){
+
+    .event-details-hero h1{
+        font-size:1.8rem;
+    }
+
+    .event-details-content{
+        padding:50px 0 80px;
+    }
+
+    .event-gallery-item img{
+        height:200px;
+    }
+
+}

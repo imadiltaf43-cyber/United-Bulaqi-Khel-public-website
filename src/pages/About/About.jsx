@@ -33,7 +33,7 @@ export default function About() {
       const data = await getWebsiteSettings();
       setSettings(data.settings);
     } catch (err) {
-      console.log(err);
+      // silently fail if settings are unavailable
     }
   };
 
@@ -124,7 +124,7 @@ export default function About() {
 
               <img
                 src={aboutCompany}
-                alt=""
+                alt="United Bulaqi Khel Enterprises mining operations and company overview"
               />
 
             </div>

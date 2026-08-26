@@ -1,4 +1,6 @@
-const API_URL = "http://localhost:5000";
+// C-07: Use environment variable — no more hardcoded localhost
+const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5000";
+
 
 export function getImageUrl(image) {
 
@@ -31,8 +33,6 @@ export function getImageUrl(image) {
             return image.secure_url;
         }
     }
-
-    console.error("Invalid image:", image);
 
     return "/api/placeholder-image.svg";
 
