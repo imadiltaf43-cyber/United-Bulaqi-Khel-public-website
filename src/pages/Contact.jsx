@@ -18,6 +18,7 @@ import { submitContact } from "../services/contactService";
 import imadImage from "../assets/images/developers/imad.jpg";
 import khalfanImage from "../assets/images/developers/khalfan.jpg";
 import faizImage from "../assets/images/developers/faiz.jpg";
+import shabirImage from "../assets/images/developers/dr shabir.jpg";
 
 import "../styles/Contact.css";
 
@@ -432,8 +433,7 @@ export default function Contact() {
 
       </section>
 
-
-      {/* ================= DEVELOPMENT TEAM ================= */}
+            {/* ================= DEVELOPMENT TEAM ================= */}
 
 <section className="development-team-section">
 
@@ -445,7 +445,58 @@ export default function Contact() {
 
       <h2>Development Team</h2>
 
+    
+
+
+{/* ================= PROJECT DIRECTOR ================= */}
+
+<section className="project-director-section">
+
+  <div className="container">
+
+    <div className="project-director-card">
+
+      <div className="project-director-avatar">
+        <img src={shabirImage} alt="Dr. Shabir Afridi" />
+      </div>
+
+      <div className="project-director-details">
+
+        <span className="project-director-role">
+          PROJECT DIRECTOR
+        </span>
+
+        <h3>Dr. Shabir Afridi</h3>
+
+        <p>
+          <strong>Contact:</strong>{" "}
+          <a href="tel:+923319420820">
+            +92 331 9420820
+          </a>
+        </p>
+
+      </div>
+
+      <a
+        href="https://www.linkedin.com/feed/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="project-director-linkedin"
+        aria-label="Dr. Shabir Afridi LinkedIn"
+      >
+        <FaLinkedinIn aria-hidden="true" />
+        <span></span>
+      </a>
+
     </div>
+
+  </div>
+
+</section>
+
+
+
+
 
     <div className="developers-grid">
 
@@ -464,6 +515,7 @@ export default function Contact() {
           <p>
             <strong>Role:</strong> Lead Developer
           </p>
+          
 
           <p>
             <strong>Education:</strong> Software Engineering
@@ -569,7 +621,11 @@ export default function Contact() {
 
   </div>
 
+  </div>
+
 </section>
+
+
           </>
 
   );

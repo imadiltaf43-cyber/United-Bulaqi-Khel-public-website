@@ -1,96 +1,884 @@
+/* =====================================================
+   ORGANIZATION HIERARCHY
+===================================================== */
+
 .organization-hierarchy {
-  padding: 40px 0;
+  width: 100%;
+  padding: 90px 0;
+  background:
+    linear-gradient(
+      180deg,
+      #f8f8f6 0%,
+      #ffffff 45%,
+      #f5f5f2 100%
+    );
 }
 
-.organization-hierarchy h2 {
+
+/* =====================================================
+   SECTION HEADER
+===================================================== */
+
+.organization-heading {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 55px;
 }
 
-.org-tree {
+.section-eyebrow {
+  display: inline-block;
+  color: #c9a227;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+}
+
+.organization-heading h2 {
+  margin: 0;
+  color: #111111;
+  font-size: 38px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+.heading-line {
+  width: 65px;
+  height: 3px;
+  background: #c9a227;
+  margin: 18px auto 0;
+}
+
+
+/* =====================================================
+   LABELS
+===================================================== */
+
+.leadership-label {
   display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 22px;
+
+  color: #c9a227;
+
+  font-size: 11px;
+  font-weight: 800;
+
+  letter-spacing: 2.5px;
+}
+
+.leadership-label.centered {
   justify-content: center;
 }
 
-.org-root,
-.org-children {
-  list-style: none;
-  padding-left: 0;
+.gold-line {
+  width: 45px;
+  height: 2px;
+  background: #c9a227;
 }
 
-.org-node {
-  margin: 8px 0;
+
+/* =====================================================
+   BOARD
+===================================================== */
+
+.board-section {
+  margin-bottom: 55px;
 }
 
-.org-card {
-  background: #fff;
-  border: 1px solid #e5e7eb;
-  padding: 12px 16px;
-  border-radius: 8px;
-  text-align: center;
-  min-width: 200px;
+.board-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+
+  margin-bottom: 25px;
+
+  color: #1e4d3b;
+  font-size: 13px;
+  letter-spacing: 2px;
 }
 
-.org-children {
-  margin-top: 8px;
-  padding-left: 20px;
+.board-label span {
+  width: 70px;
+  height: 1px;
+  background: #c9a227;
 }
 
-.org-name {
+.directors-row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+
+.director-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  min-width: 270px;
+
+  padding: 15px 20px;
+
+  background: #0f0f0f;
+
+  border: 1px solid rgba(201, 162, 39, 0.45);
+
+  border-radius: 12px;
+
+  color: #ffffff;
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+
+  transition: 0.3s ease;
+}
+
+.director-card:hover {
+  transform: translateY(-4px);
+  border-color: #c9a227;
+}
+
+.director-avatar {
+  width: 52px;
+  height: 52px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  overflow: hidden;
+
+  border: 2px solid #c9a227;
+}
+
+.director-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.director-card h4 {
+  margin: 0 0 4px;
+
+  font-size: 15px;
   font-weight: 700;
 }
 
-.org-role {
+.director-card p {
+  margin: 0;
+
+  color: #c9a227;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  text-transform: uppercase;
+}
+
+
+/* =====================================================
+   MANAGING DIRECTOR
+===================================================== */
+
+.md-section {
+  margin-bottom: 75px;
+}
+
+.md-profile-card {
+  display: grid;
+
+  grid-template-columns: minmax(280px, 0.8fr) minmax(0, 1.8fr);
+
+  min-height: 420px;
+
+  background: #ffffff;
+
+  border-radius: 20px;
+
+  overflow: hidden;
+
+  border: 1px solid #e7e7e2;
+
+  box-shadow:
+    0 20px 55px rgba(0, 0, 0, 0.09);
+}
+
+
+/* -----------------------------------------------
+   MD PROFILE
+------------------------------------------------ */
+
+.md-profile {
+  position: relative;
+
+  display: flex;
+  align-items: flex-end;
+
+  min-height: 420px;
+
+  padding: 35px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #1e4d3b 0%,
+      #163c2f 55%,
+      #102d24 100%
+    );
+
+  color: #ffffff;
+}
+
+.md-image-wrapper {
+  position: absolute;
+
+  inset: 0;
+
+  overflow: hidden;
+}
+
+.md-image-wrapper::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      to top,
+      rgba(8, 24, 19, 0.95),
+      rgba(8, 24, 19, 0.25) 60%,
+      rgba(8, 24, 19, 0.05)
+    );
+}
+
+.md-image-wrapper img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+
+/* -----------------------------------------------
+   MD INFO
+------------------------------------------------ */
+
+.md-profile-info {
+  position: relative;
+  z-index: 2;
+}
+
+.role-label {
+  display: block;
+
+  color: #c9a227;
+
+  font-size: 10px;
+  font-weight: 800;
+
+  letter-spacing: 2px;
+
+  margin-bottom: 9px;
+}
+
+.md-profile-info h3 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: 27px;
+  font-weight: 800;
+}
+
+.md-designation {
+  margin: 7px 0 0;
+
+  color: rgba(255, 255, 255, 0.72);
+
+  font-size: 14px;
+}
+
+
+/* =====================================================
+   MD MESSAGE
+===================================================== */
+
+.md-message {
+  padding: 45px 55px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  background: #ffffff;
+
+  border-left: 4px solid #c9a227;
+}
+
+.message-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+
+  margin-bottom: 25px;
+}
+
+.quote-mark {
+  color: #c9a227;
+
+  font-family: Georgia, serif;
+
+  font-size: 65px;
+
+  line-height: 45px;
+}
+
+.message-header h4 {
+  margin: 4px 0 0;
+
+  color: #17231d;
+
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.md-message > p {
+  margin: 0;
+
+  max-width: 850px;
+
+  color: #4b5563;
+
+  font-size: 15px;
+
+  line-height: 1.9;
+
+  text-align: left;
+}
+
+
+/* =====================================================
+   GENERAL MANAGER
+===================================================== */
+
+.gm-section {
+  margin-bottom: 80px;
+}
+
+.gm-card {
+  display: flex;
+  align-items: center;
+
+  max-width: 650px;
+
+  margin: 0 auto;
+
+  padding: 18px;
+
+  background: #0f0f0f;
+
+  border-radius: 16px;
+
+  border: 1px solid rgba(201, 162, 39, 0.45);
+
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.13);
+
+  color: #ffffff;
+
+  transition: 0.3s ease;
+}
+
+.gm-card:hover {
+  transform: translateY(-5px);
+  border-color: #c9a227;
+}
+
+.gm-image-wrapper {
+  width: 125px;
+  height: 125px;
+
+  flex-shrink: 0;
+
+  border-radius: 12px;
+
+  overflow: hidden;
+
+  border: 2px solid #c9a227;
+}
+
+.gm-image-wrapper img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+.gm-info {
+  padding: 0 28px;
+}
+
+.gm-info h3 {
+  margin: 0 0 7px;
+
+  font-size: 25px;
+  font-weight: 800;
+}
+
+.gm-info p {
+  margin: 0 0 12px;
+
+  color: #bfc8c3;
+}
+
+.gm-department {
+  display: inline-block;
+
+  padding: 5px 12px;
+
+  background: rgba(201, 162, 39, 0.13);
+
+  border: 1px solid rgba(201, 162, 39, 0.35);
+
+  border-radius: 30px;
+
+  color: #d8b84a;
+
+  font-size: 11px;
+  font-weight: 700;
+}
+
+
+/* =====================================================
+   DEPARTMENTS
+===================================================== */
+
+.departments-section {
+  margin-bottom: 75px;
+}
+
+.department-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 22px;
+}
+
+.department-card {
+  position: relative;
+
+  background: #ffffff;
+
+  border-radius: 15px;
+
+  overflow: hidden;
+
+  border: 1px solid #e5e5df;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+
+  transition: 0.3s ease;
+}
+
+.department-card:hover {
+  transform: translateY(-5px);
+
+  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.1);
+}
+
+.department-card::before {
+  content: "";
+
+  display: block;
+
+  height: 4px;
+
+  background: #c9a227;
+}
+
+.department-card.green::before {
+  background: #1e4d3b;
+}
+
+.department-card.red::before {
+  background: #8f302c;
+}
+
+.department-card.teal::before {
+  background: #287c76;
+}
+
+.department-card.purple::before {
+  background: #62458c;
+}
+
+.department-card.violet::before {
+  background: #7252a3;
+}
+
+.department-card-header {
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  padding: 22px 22px 15px;
+}
+
+.department-icon {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  background: #1e4d3b;
+
+  color: #c9a227;
+
+  border-radius: 10px;
+
+  font-weight: 800;
+}
+
+.department-card-header span {
+  color: #999;
+
+  font-size: 9px;
+
+  letter-spacing: 1.5px;
+
+  font-weight: 700;
+}
+
+.department-card-header h3 {
+  margin: 3px 0 0;
+
+  color: #151515;
+
+  font-size: 17px;
+
+  font-weight: 800;
+}
+
+.department-members {
+  padding: 5px 22px 22px;
+}
+
+.department-member {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 12px 0;
+
+  border-bottom: 1px solid #eeeeea;
+}
+
+.department-member:last-child {
+  border-bottom: none;
+}
+
+.department-member img {
+  width: 42px;
+  height: 42px;
+
+  border-radius: 50%;
+
+  object-fit: cover;
+
+  border: 2px solid #c9a227;
+}
+
+.department-member strong {
+  display: block;
+
+  color: #222;
+
   font-size: 13px;
-  color: #6b7280;
 }
 
-.directors-row{
-  display:flex;
-  gap:20px;
-  justify-content:center;
-  margin-bottom:24px;
+.department-member span {
+  display: block;
+
+  margin-top: 3px;
+
+  color: #888;
+
+  font-size: 11px;
 }
 
-.director-card{
-  background:#0f172a;
-  color:#fff;
-  padding:12px 20px;
-  border-radius:8px;
-  min-width:220px;
-  text-align:center;
+
+/* =====================================================
+   OTHER STAFF
+===================================================== */
+
+.other-staff-section {
+  margin-top: 30px;
 }
 
-.md-row{
-  display:flex;
-  gap:20px;
-  align-items:flex-start;
-  justify-content:center;
-  margin-bottom:20px;
+.other-staff-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 18px;
 }
 
-.md-card{
-  background:#1e40af;
-  color:#fff;
-  padding:18px 22px;
-  border-radius:8px;
-  min-width:320px;
-  text-align:center;
+.other-staff-card {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 15px;
+
+  background: #ffffff;
+
+  border: 1px solid #e5e5df;
+
+  border-radius: 12px;
+
+  transition: 0.3s ease;
 }
 
-.md-message{
-  max-width:420px;
-  background:#111827;
-  color:#fff;
-  padding:18px;
-  border-radius:8px;
+.other-staff-card:hover {
+  border-color: #c9a227;
+
+  transform: translateY(-3px);
 }
 
-.gm-row{display:flex;justify-content:center;margin-bottom:18px}
-.gm-card{background:#374151;color:#fff;padding:14px 20px;border-radius:8px;min-width:280px;text-align:center}
+.other-staff-card img {
+  width: 48px;
+  height: 48px;
 
-.departments-grid{display:flex;flex-wrap:wrap;gap:18px;justify-content:center;margin-top:18px}
-.dept-box{background:#fff;border:1px solid #e5e7eb;padding:12px;border-radius:6px;min-width:200px}
-.dept-title{font-weight:700;color:#0f172a;margin-bottom:6px}
-.dept-box ul{margin:0;padding-left:18px}
-.dept-box li{margin-bottom:6px}
+  border-radius: 50%;
+
+  object-fit: cover;
+
+  border: 2px solid #c9a227;
+}
+
+.other-staff-card strong {
+  display: block;
+
+  font-size: 13px;
+
+  color: #222;
+}
+
+.other-staff-card span {
+  display: block;
+
+  margin-top: 3px;
+
+  color: #888;
+
+  font-size: 11px;
+}
+
+
+/* =====================================================
+   OFFICE TABLE
+===================================================== */
+
+.office-table-section {
+  background: #f7f7f4;
+}
+
+.office-title-wrap {
+  text-align: center;
+
+  margin-bottom: 35px;
+}
+
+.office-title-wrap h2 {
+  margin: 0;
+
+  font-size: 32px;
+
+  font-weight: 800;
+
+  color: #111;
+}
+
+.office-title-wrap p {
+  color: #777;
+}
+
+.office-table-wrapper {
+  overflow-x: auto;
+
+  background: #ffffff;
+
+  border-radius: 15px;
+
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
+}
+
+.office-table {
+  width: 100%;
+
+  border-collapse: collapse;
+}
+
+.office-table th {
+  padding: 17px;
+
+  background: #111111;
+
+  color: #ffffff;
+
+  text-align: left;
+
+  font-size: 12px;
+
+  letter-spacing: 1px;
+
+  text-transform: uppercase;
+}
+
+.office-table td {
+  padding: 16px 17px;
+
+  border-bottom: 1px solid #eeeeea;
+
+  color: #444;
+}
+
+.office-table tbody tr:hover {
+  background: #fafaf7;
+}
+
+.name-cell {
+  color: #1e4d3b !important;
+
+  font-weight: 700;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 992px) {
+
+  .md-profile-card {
+    grid-template-columns: 1fr;
+  }
+
+  .md-profile {
+    min-height: 380px;
+  }
+
+  .md-message {
+    padding: 35px;
+  }
+
+  .department-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .other-staff-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+}
+
+
+@media (max-width: 768px) {
+
+  .organization-hierarchy {
+    padding: 60px 0;
+  }
+
+  .organization-heading h2 {
+    font-size: 30px;
+  }
+
+  .md-profile {
+    min-height: 350px;
+
+    padding: 25px;
+  }
+
+  .md-message {
+    padding: 30px 25px;
+  }
+
+  .md-message > p {
+    font-size: 14px;
+
+    line-height: 1.8;
+  }
+
+  .message-header h4 {
+    font-size: 20px;
+  }
+
+  .gm-card {
+    flex-direction: column;
+
+    text-align: center;
+
+    padding: 25px;
+  }
+
+  .gm-info {
+    padding: 20px 10px 5px;
+  }
+
+  .department-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .other-staff-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
+@media (max-width: 480px) {
+
+  .organization-heading h2 {
+    font-size: 26px;
+  }
+
+  .md-profile {
+    min-height: 320px;
+  }
+
+  .md-profile-info h3 {
+    font-size: 23px;
+  }
+
+  .md-message {
+    padding: 25px 20px;
+  }
+
+  .md-message > p {
+    font-size: 13px;
+  }
+
+  .director-card {
+    width: 100%;
+  }
+
+}
