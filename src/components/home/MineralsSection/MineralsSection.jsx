@@ -21,9 +21,9 @@ export default function MineralsSection() {
       const featured =
         data.filter((m) => m.featured).length > 0
           ? data.filter((m) => m.featured)
-          : data.slice(0, 4);
+          : data.slice(0, 3);
 
-      setMinerals(featured);
+      setMinerals(featured.slice(0, 3));
     } catch (err) {
       console.log(err);
     }

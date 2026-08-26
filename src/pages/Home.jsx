@@ -4,6 +4,8 @@ import MineralsSection from "../components/home/MineralsSection/MineralsSection"
 import OperationsSection from "../components/home/Operations/Operations";
 import EquipmentSection from "../components/home/Equipment/Equipment";
 import Sustainability from "../components/home/sustainability/Sustainability";
+import HomeStats from "../components/home/HomeStats";
+import FeaturedProjects from "../components/home/featuredProjects/FeaturedProjects";
 
 export default function Home() {
   return (
@@ -20,12 +22,13 @@ export default function Home() {
 
       <EquipmentSection />
 
+      <FeaturedProjects />
+
       <Sustainability />
       
+      
 
-
-
-
+      <HomeStats />
 
     </>
   );

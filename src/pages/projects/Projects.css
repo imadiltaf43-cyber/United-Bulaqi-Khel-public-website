@@ -81,9 +81,17 @@
 =========================== */
 
 .projects-cta {
-  background: linear-gradient(135deg,#111,#1a1a1a);
   padding: 90px 20px;
   text-align: center;
+  background:
+    linear-gradient(
+      rgba(0, 0, 0, .80),
+      rgba(0, 0, 0, .80)
+    ),
+    url("../../assets/images/projects/project-hero.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 .projects-cta h2 {

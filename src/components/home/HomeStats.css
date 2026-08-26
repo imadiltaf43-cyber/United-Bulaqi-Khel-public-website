@@ -1,0 +1,47 @@
+.home-stats {
+  background: #fff;
+  padding: 70px 0;
+}
+
+.home-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.home-stat {
+  text-align: center;
+  border-right: 1px solid rgba(17, 17, 17, .12);
+}
+
+.home-stat:last-child {
+  border: none;
+}
+
+.home-stat svg {
+  color: #d4af37;
+  margin-bottom: 18px;
+}
+
+.home-stat h2 {
+  color: #d4af37;
+  font-size: 52px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.home-stat span {
+  color: #111;
+  font-size: 17px;
+}
+
+@media (max-width: 992px) {
+  .home-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 40px;
+  }
+
+  .home-stat {
+    border: none;
+  }
+}

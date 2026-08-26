@@ -4,7 +4,7 @@ import commitmentImage from "../../assets/images/sustainability/commitment.jpg";
 
 export default function CommitmentSection() {
   return (
-    <section className="commitment-section">
+    <section id="commitment" className="commitment-section">
       <div className="container commitment-grid">
 
         {/* Left Image */}

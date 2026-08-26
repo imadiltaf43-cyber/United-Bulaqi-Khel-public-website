@@ -6,6 +6,7 @@ import {
   FaUsers,
   FaArrowRight,
 } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 import sustainabilityImage from "../../../assets/images/home/sustainability.png";
 
@@ -68,13 +69,13 @@ export default function Sustainability() {
 
             </div>
 
-            <button className="commitment-btn" >
+            <Link to="/sustainability#commitment" className="commitment-btn">
 
               Our Commitment
 
               <FaArrowRight />
 
-            </button>
+            </Link>
 
           </div>
 

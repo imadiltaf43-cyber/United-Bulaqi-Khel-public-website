@@ -1,7 +1,16 @@
 .project-cta {
-  background: linear-gradient(135deg, #111111, #1b1b1b);
-  padding: 90px 0;
+  padding: 120px 0;
   text-align: center;
+  color: #fff;
+  background:
+    linear-gradient(
+      rgba(0, 0, 0, .80),
+      rgba(0, 0, 0, .80)
+    ),
+    url("../../assets/images/projects/project-hero.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 .cta-content {

@@ -64,9 +64,9 @@ export default function AppRoutes() {
         <Route
           path="/administration"
           element={
-            <MainLayout>
+            
               <Administration />
-            </MainLayout>
+            
           }
         />
 
@@ -106,18 +106,18 @@ export default function AppRoutes() {
         <Route
           path="/projects"
           element={
-            <MainLayout>
+            
               <Projects />
-            </MainLayout>
+            
           }
         />
 
         <Route
           path="/projects/:id"
           element={
-            <MainLayout>
+            
               <ProjectDetails />
-            </MainLayout>
+            
           }
         />
 

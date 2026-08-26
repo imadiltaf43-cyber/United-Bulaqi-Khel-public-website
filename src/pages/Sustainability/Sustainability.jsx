@@ -6,6 +6,7 @@ import SustainabilityPillars from "../../components/sustainability/Sustainabilit
 import ESGSection from "../../components/sustainability/ESGSection";
 import SafetySection from "../../components/sustainability/SafetySection";
 import SustainabilityCTA from "../../components/sustainability/SustainabilityCTA";
+import SustainabilityEvents from "../../components/sustainability/SustainabilityEvents";
 
 import "./Sustainability.css";
 
@@ -21,6 +22,8 @@ export default function Sustainability() {
       <ESGSection />
 
       <SafetySection />
+
+      <SustainabilityEvents />
 
       <SustainabilityCTA />
     </MainLayout>
