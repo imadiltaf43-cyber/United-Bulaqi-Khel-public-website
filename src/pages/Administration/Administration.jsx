@@ -1,10 +1,8 @@
 import { useEffect, useState } from "react";
-
 import { Link } from "react-router-dom";
 
 import MainLayout from "../../layouts/MainLayout";
 
-import EmployeeSection from "../../components/administration/EmployeeSection";
 import OrganizationHierarchy from "../../components/administration/OrganizationHierarchy";
 
 import { getEmployees } from "../../services/employeeService";
@@ -14,176 +12,154 @@ import "./Administration.css";
 import heroBanner from "../../assets/images/administration/administration-hero.jpg";
 
 export default function Administration() {
+  const [employees, setEmployees] = useState([]);
+  const [loading, setLoading] = useState(true);
 
-    const [employees, setEmployees] = useState([]);
+  useEffect(() => {
+    fetchEmployees();
+  }, []);
 
-    const [loading, setLoading] = useState(true);
+  const fetchEmployees = async () => {
+    try {
+      setLoading(true);
 
-    //-------------------------------------
+      const data = await getEmployees();
 
-    useEffect(() => {
+      setEmployees(data.employees || []);
+    } catch (err) {
+      console.error("Failed to load employees:", err);
+    } finally {
+      setLoading(false);
+    }
+  };
 
-        fetchEmployees();
+  /*
+   * -----------------------------------------
+   * GROUP EMPLOYEES BY OFFICE
+   * -----------------------------------------
+   */
 
-    }, []);
+  const headOfficeEmployees = employees.filter(
+    (employee) =>
+      (employee.office || "Head Office") === "Head Office"
+  );
 
-    //-------------------------------------
+  const chitralEmployees = employees.filter(
+    (employee) => employee.office === "Chitral"
+  );
 
-    const fetchEmployees = async () => {
+  const darraEmployees = employees.filter(
+    (employee) => employee.office === "Darra"
+  );
 
-        try {
+  /*
+   * -----------------------------------------
+   * RENDER
+   * -----------------------------------------
+   */
 
-            const data = await getEmployees();
+  return (
+    <MainLayout>
+      {/* =====================================
+          HERO
+      ===================================== */}
 
-            setEmployees(data.employees || []);
+      <section
+        className="administration-hero"
+        style={{
+          backgroundImage: `url(${heroBanner})`,
+        }}
+      >
+        <div className="overlay"></div>
 
-        }
+        <div className="container">
+          <div className="hero-content">
 
-        catch (err) {
+            <div className="compact-hero-breadcrumb">
+              <Link to="/">Home</Link>
 
-            console.error(err);
+              <span>/</span>
 
-        }
+              <span>Administration</span>
+            </div>
 
-        finally {
+            <span className="compact-hero-tag">
+              Our Leadership
+            </span>
 
-            setLoading(false);
+            <h1>
+              Administration
+            </h1>
 
-        }
+            <div className="compact-hero-line"></div>
 
-    };
+          </div>
+        </div>
+      </section>
 
-    //-------------------------------------
-    // Groups (Head Office focused)
-    //-------------------------------------
+      {/* =====================================
+          LOADING
+      ===================================== */}
 
-const headEmployees = employees.filter((emp) => (emp.office || "Head Office") === "Head Office");
-
-const directors = headEmployees.filter((emp) => ((emp.designation || "") + "").toLowerCase().includes("director") || ((emp.designation || "") + "").toLowerCase().includes("chairman"));
-
-const md = headEmployees.find((emp) => ((emp.designation || "") + "").toLowerCase().includes("managing director") || ((emp.designation || "") + "").toLowerCase().includes("md"));
-
-const gm = headEmployees.find((emp) => ((emp.designation || "") + "").toLowerCase().includes("general manager") || ((emp.designation || "") + "").toLowerCase().includes("gm"));
-
-// Group remaining head office employees by `department` field
-const deptMap = {};
-headEmployees.forEach((emp) => {
-    // skip directors/md/gm from department lists
-    if (directors.some((d) => d._id === emp._id)) return;
-    if (md && emp._id === md._id) return;
-    if (gm && emp._id === gm._id) return;
-
-    const dept = emp.department || "Other";
-    if (!deptMap[dept]) deptMap[dept] = [];
-    deptMap[dept].push(emp);
-});
-
-// Any head employees not captured (should be none) go to Other
-const operationalStaff = deptMap.Other || [];
-
-    //-------------------------------------
-
-    return (
+      {loading ? (
+        <div className="container py-5 text-center">
+          <div className="spinner-border text-warning"></div>
+        </div>
+      ) : (
         <>
-       
+          {/* =================================
+              HEAD OFFICE
+          ================================= */}
 
-            {/* Hero */}
+          <OrganizationHierarchy
+            title="UNITED BULAQI KHEL ENTERPRISES"
+            office="Head Office"
+            employees={headOfficeEmployees}
+            variant="hierarchy"
+          />
 
-            <section
-                className="administration-hero"
-                style={{
-                    backgroundImage: `url(${heroBanner})`,
-                }}
-            >
+          {/* =================================
+              CHITRAL OFFICE
+          ================================= */}
 
-                <div className="overlay"></div>
+          {chitralEmployees.length > 0 && (
+            <OrganizationHierarchy
+              title="UBKE DANIN CHITRAL"
+              office="Chitral"
+              employees={chitralEmployees}
+              variant="office-table"
+            />
+          )}
 
-                <div className="container">
+          {/* =================================
+              DARRA OFFICE
+          ================================= */}
 
-                    <div className="hero-content">
+          {darraEmployees.length > 0 && (
+            <OrganizationHierarchy
+              title="UBKE MAIN OFFICE DARA ADAM KHEL"
+              office="Darra"
+              employees={darraEmployees}
+              variant="office-table"
+            />
+          )}
 
-                        <div className="compact-hero-breadcrumb">
-                            <Link to="/">Home</Link>
-                            <span>/</span>
-                            <span>Administration</span>
-                        </div>
+          {/* =================================
+              NO EMPLOYEES
+          ================================= */}
 
-                        <span className="compact-hero-tag">Our Leadership</span>
+          {employees.length === 0 && (
+            <section className="container py-5 text-center">
+              <h3>No administration information available.</h3>
 
-                        <h1>
-
-                            Administration
-
-                        </h1>
-
-                        <div className="compact-hero-line"></div>
-
-                    </div>
-
-                </div>
-
+              <p className="text-muted">
+                Employee information will appear here once
+                it has been added.
+              </p>
             </section>
-
-            {
-
-                loading
-
-                ?
-
-                (
-
-                    <div className="container py-5 text-center">
-
-                        <div className="spinner-border text-warning"></div>
-
-                    </div>
-
-                )
-
-                :
-
-                (
-
-                    <>
-
-                        <OrganizationHierarchy
-                            title="Head Office Hierarchy"
-                            employees={employees.filter((e) => (e.office || "Head Office") === "Head Office")}
-                            office={"Head Office"}
-                        />
-
-                        <EmployeeSection title="Board of Directors" employees={directors} />
-
-                        {/* Render each department present in head office */}
-                        {Object.keys(deptMap).map((dept) => (
-                            <EmployeeSection key={dept} title={dept} employees={deptMap[dept]} />
-                        ))}
-
-                        {/* Fallback: if no department groups found, show operational staff */}
-                        {Object.keys(deptMap).length === 0 && (
-                            <EmployeeSection title="Operational Staff" employees={operationalStaff} />
-                        )}
-
-                        <OrganizationHierarchy
-                            title="Chitral Office Hierarchy"
-                            employees={employees.filter((e) => e.office === "Chitral")}
-                            office={"Chitral"}
-                        />
-
-                        <OrganizationHierarchy
-                            title="Darra Office Hierarchy"
-                            employees={employees.filter((e) => e.office === "Darra")}
-                            office={"Darra"}
-                        />
-
-                    </>
-
-                )
-
-            }
-
+          )}
         </>
-
-    );
-
+      )}
+    </MainLayout>
+  );
 }

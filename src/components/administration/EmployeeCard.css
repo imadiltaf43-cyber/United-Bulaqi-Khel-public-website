@@ -1,77 +1,178 @@
-.employee-card{
+/* =========================================
+   EMPLOYEE CARD
+========================================= */
 
-    background:#fff;
+.employee-card {
+  background: #fff;
+  border-radius: 18px;
+  overflow: hidden;
 
-    border-radius:18px;
+  border: 1px solid #e7e7e7;
 
-    overflow:hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
 
-    box-shadow:0 12px 35px rgba(0,0,0,.08);
+  text-align: center;
 
-    text-align:center;
+  height: 100%;
 
-    height:100%;
-
+  transition: all 0.3s ease;
 }
 
-.employee-image{
+.employee-card:hover {
+  transform: translateY(-7px);
 
-    height:320px;
+  border-color: rgba(201, 162, 39, 0.45);
 
-    overflow:hidden;
-
-    background:#ececec;
-
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
 }
 
-.employee-image img{
+/* =========================================
+   IMAGE
+========================================= */
 
-    width:100%;
+.employee-image {
+  height: 300px;
 
-    height:100%;
+  overflow: hidden;
 
-    object-fit:cover;
+  background: #eceeea;
 
+  position: relative;
 }
 
-.employee-content{
+.employee-image img {
+  width: 100%;
+  height: 100%;
 
-    padding:28px;
+  object-fit: cover;
 
+  display: block;
+
+  transition: transform 0.5s ease;
 }
 
-.employee-content h3{
-
-    font-size:24px;
-
-    font-weight:700;
-
-    color:#111;
-
-    margin-bottom:10px;
-
+.employee-card:hover .employee-image img {
+  transform: scale(1.04);
 }
 
-.employee-content h5{
+/* =========================================
+   CONTENT
+========================================= */
 
-    color:#c89b2b;
-
-    font-size:17px;
-
-    font-weight:600;
-
-    margin-bottom:15px;
-
+.employee-content {
+  padding: 24px 20px 26px;
 }
 
-.employee-content p{
+.employee-content h3 {
+  margin: 0 0 7px;
 
-    color:#666;
+  color: #111;
 
-    margin:0;
+  font-size: 21px;
 
-    word-break:break-word;
+  font-weight: 700;
 
-    font-size:15px;
+  line-height: 1.3;
+}
 
+.employee-content h5 {
+  margin: 0 0 10px;
+
+  color: #c9a227;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  line-height: 1.4;
+}
+
+/* =========================================
+   DEPARTMENT
+========================================= */
+
+.employee-department {
+  display: inline-block;
+
+  margin-bottom: 8px;
+
+  padding: 5px 11px;
+
+  border-radius: 20px;
+
+  background: rgba(30, 77, 59, 0.09);
+
+  color: #1e4d3b;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.4px;
+
+  text-transform: uppercase;
+}
+
+/* =========================================
+   OFFICE
+========================================= */
+
+.employee-office {
+  margin: 0;
+
+  color: #777;
+
+  font-size: 13px;
+
+  word-break: break-word;
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 992px) {
+  .employee-image {
+    height: 280px;
+  }
+
+  .employee-content h3 {
+    font-size: 20px;
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+  .employee-image {
+    height: 320px;
+  }
+
+  .employee-content {
+    padding: 22px 18px 24px;
+  }
+
+  .employee-content h3 {
+    font-size: 21px;
+  }
+}
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+  .employee-image {
+    height: 280px;
+  }
+
+  .employee-content h3 {
+    font-size: 19px;
+  }
+
+  .employee-content h5 {
+    font-size: 14px;
+  }
 }
