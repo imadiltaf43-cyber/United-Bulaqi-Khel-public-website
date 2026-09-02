@@ -490,7 +490,7 @@ export default function OrganizationHierarchy({
             OTHER STAFF
         ============================================ */}
 
-        {remainingEmployees.length > 0 && (
+        {/* {remainingEmployees.length > 0 && (
           <div className="other-staff-section">
 
             <div className="leadership-label centered">
@@ -532,7 +532,7 @@ export default function OrganizationHierarchy({
             </div>
 
           </div>
-        )}
+        )} */}
 
       </div>
 

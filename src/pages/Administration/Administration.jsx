@@ -10,6 +10,8 @@ import { getEmployees } from "../../services/employeeService";
 import "./Administration.css";
 
 import heroBanner from "../../assets/images/administration/administration-hero.jpg";
+import employeeRoutingMap from "../../assets/images/Capture.PNG";
+import chitralAdministrativeMap from "../../assets/images/Capture2.PNG";
 
 export default function Administration() {
   const [employees, setEmployees] = useState([]);
@@ -107,6 +109,18 @@ export default function Administration() {
         </div>
       ) : (
         <>
+          <section className="administration-map-section" aria-labelledby="employee-routing-map-title">
+            <div className="container">
+              <div className="administration-map">
+                <h2 id="employee-routing-map-title">Employee Reporting Structure</h2>
+                <img
+                  src={employeeRoutingMap}
+                  alt="United Bulaqi Khel Enterprises employee reporting structure"
+                />
+              </div>
+            </div>
+          </section>
+
           {/* =================================
               HEAD OFFICE
           ================================= */}
@@ -117,6 +131,18 @@ export default function Administration() {
             employees={headOfficeEmployees}
             variant="hierarchy"
           />
+
+          <section className="administration-map-section chitral-map-section" aria-labelledby="chitral-map-title">
+            <div className="container">
+              <div className="administration-map">
+                <h2 id="chitral-map-title">Chitral Project Administrative Mapping</h2>
+                <img
+                  src={chitralAdministrativeMap}
+                  alt="Chitral Projects administrative mapping"
+                />
+              </div>
+            </div>
+          </section>
 
           {/* =================================
               CHITRAL OFFICE
@@ -160,6 +186,7 @@ export default function Administration() {
           )}
         </>
       )}
+      
     </MainLayout>
   );
 }

@@ -102,6 +102,66 @@
 }
 
 /* ===========================================
+   Organization Maps
+=========================================== */
+
+.administration-map-section {
+
+    padding: 64px 0 20px;
+
+    background: #fff;
+
+}
+
+.chitral-map-section {
+
+    padding-top: 20px;
+
+    padding-bottom: 64px;
+
+}
+
+.administration-map {
+
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    padding: 28px;
+
+    background: #fff;
+
+    border: 1px solid #e5e5df;
+
+    box-shadow: 0 14px 35px rgba(0, 0, 0, .08);
+
+}
+
+.administration-map h2 {
+
+    margin: 0 0 22px;
+
+    color: #1e4d3b;
+
+    font-size: 24px;
+
+    font-weight: 800;
+
+    text-align: center;
+
+}
+
+.administration-map img {
+
+    display: block;
+
+    width: 100%;
+
+    height: auto;
+
+}
+
+/* ===========================================
    Responsive
 =========================================== */
 
@@ -174,6 +234,32 @@
 }
 
 @media(max-width:576px){
+
+    .administration-map-section {
+
+        padding: 42px 0 12px;
+
+    }
+
+    .chitral-map-section {
+
+        padding-top: 12px;
+
+        padding-bottom: 42px;
+
+    }
+
+    .administration-map {
+
+        padding: 16px;
+
+    }
+
+    .administration-map h2 {
+
+        font-size: 20px;
+
+    }
 
     .administration-hero{
 
